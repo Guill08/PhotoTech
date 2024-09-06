@@ -1,0 +1,90 @@
+16:58:47.678 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+16:58:47.681 DEBUG org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+16:58:47.681 DEBUG org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+16:58:47.684 DEBUG org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+16:58:47.685 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/IdeaProjects/DeclarationOF3/conf/compteur.properties
+16:58:47.692 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+16:58:47.692 DEBUG org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+16:58:47.692 DEBUG org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+16:58:47.692 DEBUG org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+16:58:47.692 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/IdeaProjects/DeclarationOF3/conf/configuration.properties
+16:58:47.693 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+16:58:47.693 DEBUG org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+16:58:47.693 DEBUG org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+16:58:47.694 DEBUG org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+16:58:47.694 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/IdeaProjects/DeclarationOF3/confuser/user.properties
+16:59:04.403 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+16:59:04.406 DEBUG org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+16:59:04.406 DEBUG org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+16:59:04.408 DEBUG org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+16:59:04.409 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/IdeaProjects/DeclarationOF3/conf/compteur.properties
+16:59:04.415 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+16:59:04.415 DEBUG org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+16:59:04.415 DEBUG org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+16:59:04.415 DEBUG org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+16:59:04.415 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/IdeaProjects/DeclarationOF3/conf/configuration.properties
+16:59:04.416 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+16:59:04.416 DEBUG org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+16:59:04.417 DEBUG org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+16:59:04.417 DEBUG org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+16:59:04.417 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/IdeaProjects/DeclarationOF3/confuser/user.properties
+10:50:04.129 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+10:50:04.134 DEBUG org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+10:50:04.135 DEBUG org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+10:50:04.139 DEBUG org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+10:50:04.139 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///FABER/SI/dev/GS/IdeaProjects/DeclarationOF3/conf/compteur.properties
+10:50:04.153 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+10:50:04.153 DEBUG org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+10:50:04.154 DEBUG org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+10:50:04.155 DEBUG org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+10:50:04.155 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///FABER/SI/dev/GS/IdeaProjects/DeclarationOF3/conf/configuration.properties
+10:50:04.157 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+10:50:04.158 DEBUG org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+10:50:04.158 DEBUG org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+10:50:04.159 DEBUG org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+10:50:04.159 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///FABER/SI/dev/GS/IdeaProjects/DeclarationOF3/confuser/user.properties
+11:26:12.599 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+11:26:12.604 DEBUG org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+11:26:12.605 DEBUG org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+11:26:12.608 DEBUG org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+11:26:12.609 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/projetModel/conf/compteur.properties
+11:26:12.619 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+11:26:12.620 DEBUG org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+11:26:12.620 DEBUG org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+11:26:12.620 DEBUG org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+11:26:12.620 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/projetModel/conf/configuration.properties
+11:26:12.621 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+11:26:12.621 DEBUG org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+11:26:12.622 DEBUG org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+11:26:12.622 DEBUG org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+11:26:12.622 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/projetModel/confuser/user.properties
+11:29:00.439 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+11:29:00.442 DEBUG org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+11:29:00.442 DEBUG org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+11:29:00.445 DEBUG org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+11:29:00.445 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/projetModel/conf/compteur.properties
+11:29:00.451 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+11:29:00.451 DEBUG org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+11:29:00.451 DEBUG org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+11:29:00.451 DEBUG org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+11:29:00.451 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/projetModel/conf/configuration.properties
+11:29:00.452 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+11:29:00.452 DEBUG org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+11:29:00.452 DEBUG org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+11:29:00.453 DEBUG org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+11:29:00.453 DEBUG org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/projetModel/confuser/user.properties
+12:07:42.688 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+12:07:42.691 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+12:07:42.691 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+12:07:42.694 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+12:07:42.694 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/projetModel/conf/compteur.properties
+12:07:42.701 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+12:07:42.701 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+12:07:42.701 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+12:07:42.701 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+12:07:42.702 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/projetModel/conf/configuration.properties
+12:07:42.702 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+12:07:42.703 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+12:07:42.703 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+12:07:42.703 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+12:07:42.703 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/projetModel/confuser/user.properties

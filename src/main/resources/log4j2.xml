@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<configurationApplication status="OFF">
+    <appenders>  
+        <Console name="Console" target="SYSTEM_OUT">  
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>  
+        </Console>  
+         <Console name="Console2" target="SYSTEM_OUT">  
+            <PatternLayout pattern="%d{yyyy HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>  
+        </Console> 
+        <File name="log" fileName="log/error.log" append="true">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
+        </File>
+    </appenders>  
+    <loggers>  
+        <logger name="fr.faber.testlog4j2.Main" level="error" additivity="false">
+            <appender-ref ref="log"/>
+        </logger>
+        <root level="debug">  
+             <appender-ref ref="Console"/> 
+            <appender-ref ref="log"/>  
+        </root>  
+    </loggers>  
+</configurationApplication>

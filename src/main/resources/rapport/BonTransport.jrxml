@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BonTransport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="aafa8106-bbeb-4059-9820-cfe797db2c4d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="logo" class="java.awt.Image"/>
+	<parameter name="bonTransport" class="fr.faber.objet_old.BonTransport"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="67" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="10" width="120" height="50" forecolor="#FFFFFF" uuid="8669850b-40e6-4166-9c95-f703f7e24ff9"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="160" y="15" width="260" height="41" uuid="244d16c6-e43c-442d-b814-6692ff79255c"/>
+				<textElement>
+					<font size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bon de Transport]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="347" splitType="Stretch">
+			<frame>
+				<reportElement x="353" y="7" width="200" height="90" uuid="33a6b415-6082-48df-8d4d-b3d89483c480"/>
+				<frame>
+					<reportElement x="0" y="20" width="200" height="90" uuid="75b0f8d3-acf8-4217-b17a-2600b54989b6"/>
+					<box>
+						<pen lineWidth="1.0"/>
+					</box>
+					<textField>
+						<reportElement x="3" y="0" width="194" height="90" uuid="78e2053c-8f1c-451f-9f59-e296000ea1c6"/>
+						<textFieldExpression><![CDATA[$P{bonTransport}.getClient() + "\n"+$P{bonTransport}.getAdresseLivraison()]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="0" width="200" height="20" uuid="458049e4-d4a7-478c-917c-824db4ac3d1c"/>
+					<box>
+						<pen lineWidth="1.0"/>
+					</box>
+					<staticText>
+						<reportElement x="2" y="0" width="168" height="20" uuid="4ddf41a3-04b9-4694-a814-49bcb7697486">
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						</reportElement>
+						<box rightPadding="0"/>
+						<textElement>
+							<font isBold="true"/>
+						</textElement>
+						<text><![CDATA[Destination :]]></text>
+					</staticText>
+				</frame>
+			</frame>
+			<textField isBlankWhenNull="true">
+				<reportElement x="340" y="120" width="216" height="150" uuid="456ea6f5-6314-4570-8b8a-c1f8f245ea97"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<textFieldExpression><![CDATA["Liste des colis : "+"\n"+ $P{bonTransport}.getListeElementEnvoyes()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="6" y="277" width="216" height="62" uuid="275c6df5-f8ae-4ee3-b74f-e14a621ee239"/>
+				<textFieldExpression><![CDATA["Commentaires  : " +$P{bonTransport}.getCommentaire()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="1" width="280" height="30" uuid="5834d438-38b1-46ec-902f-c4ded8322eda"/>
+				<textFieldExpression><![CDATA["Date de la demande de transport : " +$P{bonTransport}.getDateDemandeTransport()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="32" width="280" height="30" uuid="09c127f0-938e-4ae5-af05-6afb4b7ec767"/>
+				<textFieldExpression><![CDATA["Date d'enlèvement impérative : " + $P{bonTransport}.getDateEnlevementImperative()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="62" width="280" height="32" uuid="96d89ded-5ee0-4505-9c1d-3515eb9fe4cb"/>
+				<textFieldExpression><![CDATA["Date de livraison impérative : "+$P{bonTransport}.getDateLivraisonImperative()]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="5" y="99" width="271" height="171" uuid="3db2c962-1740-451b-a845-9ce61b3ee75a"/>
+				<textField>
+					<reportElement x="0" y="0" width="216" height="31" uuid="0d7ad57b-b21e-45eb-a742-f19c584226bc"/>
+					<textFieldExpression><![CDATA["Numéro du bon de livraison : "+$P{bonTransport}.getNumeroBL()]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="91" width="200" height="20" uuid="650a5cb6-be15-4cba-a4b4-225ef72f45f1"/>
+					<textElement>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Pays : " +$P{bonTransport}.getLibellePays()]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="111" width="200" height="20" isRemoveLineWhenBlank="true" uuid="58cc2f07-e7ca-4c44-a97b-6a0287d73a37"/>
+					<textElement>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Département : " +$P{bonTransport}.getLibelleDepartement()]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="0" y="131" width="200" height="20" isRemoveLineWhenBlank="true" uuid="68d5c317-2e3d-4d54-9865-3913e01985df"/>
+					<textElement>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Ville : "+$P{bonTransport}.getLibelleVille()]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="31" width="150" height="20" uuid="dcb51d0a-bb82-4dd9-8a88-65a3b1d05bb9"/>
+					<textElement>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Transporteur : " + $P{bonTransport}.getRaisonSocialeTransporteur()]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="71" width="160" height="20" uuid="306de2b7-d62b-42ac-a7e0-ff824ea8f826"/>
+					<textElement>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Libellé du tarif : "+$P{bonTransport}.getLibelleTarif()]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="51" width="160" height="20" uuid="f9f980ec-e9e4-435d-b396-53f918e72ae6"/>
+					<textElement>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Type du transport : " +$P{bonTransport}.getLibelleTypeTransport()]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="151" width="271" height="20" uuid="97ec892b-65e6-47b8-a3b0-5e4512d7704c"/>
+					<textElement>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Coût tarif transporteur : " +$P{bonTransport}.getCoutTransport() + " €"]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

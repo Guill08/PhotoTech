@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="compile">
+    <output-path>$PROJECT_DIR$/out/artifacts/compile</output-path>
+    <root id="root">
+      <element id="artifact" artifact-name="DeclarationOF3:jar" />
+      <element id="directory" name="conf">
+        <element id="dir-copy" path="$PROJECT_DIR$/conf" />
+      </element>
+      <element id="directory" name="confuser">
+        <element id="dir-copy" path="$PROJECT_DIR$/confuser" />
+      </element>
+      <element id="directory" name="update">
+        <element id="dir-copy" path="$PROJECT_DIR$/update" />
+      </element>
+    </root>
+  </artifact>
+</component>

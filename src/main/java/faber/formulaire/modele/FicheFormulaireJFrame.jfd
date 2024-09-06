@@ -1,0 +1,64 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.9.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "pnlMain"
+				"minimumSize": new java.awt.Dimension( 800, 600 )
+				"preferredSize": new java.awt.Dimension( 800, 600 )
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 4
+				}
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "insets 0,hidemode 3"
+					"$columnConstraints": "[0,fill][285,fill]rel[grow,fill][0,fill]"
+					"$rowConstraints": "rel[30,grow,fill][0]"
+				} ) {
+					name: "pnlPiedFormulaire"
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 4
+					}
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btnFermer"
+						"text": "Fermer"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/png/close.png" )
+						"maximumSize": new java.awt.Dimension( 100, 30 )
+						"minimumSize": new java.awt.Dimension( 100, 30 )
+						"preferredSize": new java.awt.Dimension( 100, 30 )
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 4
+							"JavaCodeGenerator.variableGetter": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 0,growx"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btnEnregistrer"
+						"text": "Enregistrer"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/png/save.png" )
+						"maximumSize": new java.awt.Dimension( 120, 30 )
+						"minimumSize": new java.awt.Dimension( 120, 30 )
+						"preferredSize": new java.awt.Dimension( 120, 30 )
+						auxiliary() {
+							"JavaCodeGenerator.variableGetter": true
+							"JavaCodeGenerator.variableModifiers": 4
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 0,alignx right,growx 0"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "South"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 630, 355 )
+		} )
+	}
+}
