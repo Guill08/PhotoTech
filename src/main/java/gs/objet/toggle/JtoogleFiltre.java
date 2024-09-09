@@ -1,7 +1,7 @@
 package gs.objet.toggle;
 
 import gs.objet.FiltreRaz;
-import org.apache.logging.log4j.LogManager;
+
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -15,7 +15,7 @@ RSI
 11:25
 */
 public class JtoogleFiltre extends JToggleButton {
-    private static final org.apache.logging.log4j.Logger LOGGER = LogManager.getLogger("application");
+
     //exemple : LOGGER.error( "msg", exception );
     private String requete = "";
 

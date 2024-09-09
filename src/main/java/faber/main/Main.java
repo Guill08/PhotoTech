@@ -12,6 +12,9 @@ package faber.main;
 
 import com.formdev.flatlaf.FlatLightLaf;
 import faber.formulaire.mainFormulaire.MainFormulaire;
+import faber.objet.connexion.SqlLite;
+import faber.objet.metaDataFile.HashageFile;
+import faber.objet.metaDataFile.MetaDataFile;
 import faber.tool.alerte.Boite;
 import faber.tool.configuration.Configuration;
 import faber.tool.configuration.dao.DaoConfigurationApplication;
@@ -24,7 +27,7 @@ import gs.objet.erreur.ErreurCritereManquant;
 import gs.objet.erreur.ErreurInterval;
 import gs.objet.erreur.ErreurValeurIncorrecte;
 import org.apache.commons.io.FileUtils;
-import org.apache.logging.log4j.LogManager;
+
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 
@@ -101,7 +104,7 @@ public class Main {
 
     private static HashMap<String, String> collectionCategorieCout = new HashMap<String, String>();
 
-    private static final org.apache.logging.log4j.Logger LOGGER = LogManager.getLogger(Main.class.getName());
+
 
 
     public static void main(String[] args) throws Exception {
@@ -109,6 +112,12 @@ public class Main {
         Main.initialiserCollections();
       //  Main.intialiserIcones();
         initialiserMainFormulaire();
+        MetaDataFile metaDataFile = new MetaDataFile(new File("example.file"));
+        metaDataFile.ajouterPopriete("test","Coucou");
+        System.out.println(metaDataFile.lirePropriete("test"));
+        String sha256Hash = HashageFile.calculateFileHash("example.file", "SHA-256");
+        System.out.println("SHA-256: " + sha256Hash);
+        SqlLite sqlLite = new SqlLite("jdbc:sqlite:my.db");
 
 
     }

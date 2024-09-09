@@ -88,3 +88,228 @@
 12:07:42.703 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
 12:07:42.703 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
 12:07:42.703 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/projetModel/confuser/user.properties
+15:37:01.773 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+15:37:01.776 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+15:37:01.776 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+15:37:01.780 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+15:37:01.780 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/compteur.properties
+15:37:01.794 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+15:37:01.794 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+15:37:01.794 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+15:37:01.795 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+15:37:01.795 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/configuration.properties
+15:37:01.796 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+15:37:01.796 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+15:37:01.796 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+15:37:01.796 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+15:37:01.796 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/confuser/user.properties
+16:16:55.741 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+16:16:55.744 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+16:16:55.744 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+16:16:55.746 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+16:16:55.746 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/compteur.properties
+16:16:55.758 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+16:16:55.759 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+16:16:55.759 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+16:16:55.759 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+16:16:55.759 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/configuration.properties
+16:16:55.759 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+16:16:55.759 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+16:16:55.760 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+16:16:55.760 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+16:16:55.760 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/confuser/user.properties
+16:17:21.476 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+16:17:21.479 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+16:17:21.479 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+16:17:21.481 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+16:17:21.481 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/compteur.properties
+16:17:21.494 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+16:17:21.494 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+16:17:21.495 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+16:17:21.495 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+16:17:21.495 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/configuration.properties
+16:17:21.495 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+16:17:21.496 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+16:17:21.496 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+16:17:21.496 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+16:17:21.496 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/confuser/user.properties
+11:29:54.440 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+11:29:54.442 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+11:29:54.442 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+11:29:54.445 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+11:29:54.445 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/compteur.properties
+11:29:54.457 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+11:29:54.457 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+11:29:54.457 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+11:29:54.457 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+11:29:54.457 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/configuration.properties
+11:29:54.458 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+11:29:54.458 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+11:29:54.458 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+11:29:54.458 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+11:29:54.458 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/confuser/user.properties
+11:43:59.402 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+11:43:59.404 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+11:43:59.405 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+11:43:59.407 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+11:43:59.407 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/compteur.properties
+11:43:59.419 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+11:43:59.419 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+11:43:59.419 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+11:43:59.419 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+11:43:59.419 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/configuration.properties
+11:43:59.419 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+11:43:59.420 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+11:43:59.420 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+11:43:59.420 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+11:43:59.420 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/confuser/user.properties
+15:54:32.940 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+15:54:32.942 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+15:54:32.942 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+15:54:32.944 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+15:54:32.945 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/compteur.properties
+15:54:32.957 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+15:54:32.958 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+15:54:32.958 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+15:54:32.958 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+15:54:32.958 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/configuration.properties
+15:54:32.959 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+15:54:32.959 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+15:54:32.959 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+15:54:32.959 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+15:54:32.959 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/confuser/user.properties
+16:18:14.197 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+16:18:14.199 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+16:18:14.200 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+16:18:14.202 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+16:18:14.202 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/compteur.properties
+16:18:14.213 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+16:18:14.213 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+16:18:14.213 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+16:18:14.214 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+16:18:14.214 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/configuration.properties
+16:18:14.214 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+16:18:14.214 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+16:18:14.214 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+16:18:14.214 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+16:18:14.214 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/confuser/user.properties
+16:29:16.431 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+16:29:16.433 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+16:29:16.433 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+16:29:16.435 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+16:29:16.435 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/compteur.properties
+16:29:16.446 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+16:29:16.446 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+16:29:16.447 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+16:29:16.447 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+16:29:16.447 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/configuration.properties
+16:29:16.447 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+16:29:16.447 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+16:29:16.447 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+16:29:16.447 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+16:29:16.448 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/confuser/user.properties
+16:30:43.891 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+16:30:43.894 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+16:30:43.894 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+16:30:43.902 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+16:30:43.902 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/compteur.properties
+16:30:43.907 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+16:30:43.907 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+16:30:43.907 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+16:30:43.908 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+16:30:43.908 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/configuration.properties
+16:30:43.908 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+16:30:43.908 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+16:30:43.908 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+16:30:43.908 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+16:30:43.909 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/confuser/user.properties
+16:31:42.396 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+16:31:42.398 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+16:31:42.398 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+16:31:42.400 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+16:31:42.400 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/compteur.properties
+16:31:42.411 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+16:31:42.411 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+16:31:42.412 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+16:31:42.412 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+16:31:42.412 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/configuration.properties
+16:31:42.412 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+16:31:42.412 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+16:31:42.412 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+16:31:42.413 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+16:31:42.413 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/confuser/user.properties
+16:32:09.937 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+16:32:09.940 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+16:32:09.940 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+16:32:09.942 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+16:32:09.943 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/compteur.properties
+16:32:09.954 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+16:32:09.955 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+16:32:09.955 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+16:32:09.955 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+16:32:09.955 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/configuration.properties
+16:32:09.956 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+16:32:09.956 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+16:32:09.956 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+16:32:09.956 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+16:32:09.956 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/confuser/user.properties
+16:39:18.909 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+16:39:18.911 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+16:39:18.911 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+16:39:18.913 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+16:39:18.913 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/compteur.properties
+16:39:18.925 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+16:39:18.925 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+16:39:18.925 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+16:39:18.926 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+16:39:18.926 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/configuration.properties
+16:39:18.926 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+16:39:18.926 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+16:39:18.927 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+16:39:18.927 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+16:39:18.927 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/confuser/user.properties
+16:41:11.422 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+16:41:11.425 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+16:41:11.425 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+16:41:11.428 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+16:41:11.429 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/compteur.properties
+16:41:11.435 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+16:41:11.435 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+16:41:11.435 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+16:41:11.435 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+16:41:11.435 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/configuration.properties
+16:41:11.436 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+16:41:11.436 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+16:41:11.436 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+16:41:11.436 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+16:41:11.437 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/confuser/user.properties
+16:42:50.331 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+16:42:50.333 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+16:42:50.333 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+16:42:50.335 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+16:42:50.336 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/compteur.properties
+16:42:50.341 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+16:42:50.341 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+16:42:50.341 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+16:42:50.342 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+16:42:50.342 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/configuration.properties
+16:42:50.342 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+16:42:50.342 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+16:42:50.342 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+16:42:50.342 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+16:42:50.343 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/confuser/user.properties
+16:46:32.151 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/compteur.properties
+16:46:32.153 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/compteur.properties
+16:46:32.153 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/compteur.properties at null: no protocol: conf/compteur.properties
+16:46:32.155 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/compteur.properties
+16:46:32.156 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/compteur.properties
+16:46:32.161 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to conf/configuration.properties
+16:46:32.161 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is conf/configuration.properties
+16:46:32.162 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file conf/configuration.properties at null: no protocol: conf/configuration.properties
+16:46:32.162 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path conf/configuration.properties
+16:46:32.162 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/conf/configuration.properties
+16:46:32.162 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 588 setFileName - FileName set to confuser/user.properties
+16:46:32.162 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 449 locate - ConfigurationUtils.locate(): base is null, name is confuser/user.properties
+16:46:32.163 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.DefaultFileSystem 281 locateFromURL - Could not locate file confuser/user.properties at null: no protocol: confuser/user.properties
+16:46:32.163 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.ConfigurationUtils 493 locate - Loading configuration from the path confuser/user.properties
+16:46:32.163 DEBUG#org.apache.log4j.Level org.apache.commons.configuration.AbstractFileConfiguration 626 setBasePath - Base path set to file:///home/rsi@BAZEILLES.local/Documents/dev/photoTechFaber/confuser/user.properties

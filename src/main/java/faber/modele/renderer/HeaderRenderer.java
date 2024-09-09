@@ -5,7 +5,9 @@
  */
 package faber.modele.renderer;
 
-import org.apache.logging.log4j.LogManager;
+import faber.alerte.Alerte;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -19,8 +21,8 @@ import java.awt.*;
  * @author rdev
  */
 public class HeaderRenderer extends JLabel implements TableCellRenderer {
+    final Logger logger = LoggerFactory.getLogger(HeaderRenderer.class);
 
-    private static final org.apache.logging.log4j.Logger LOGGER = LogManager.getLogger(HeaderRenderer.class.getName());
     private int largeur;
     private int nombreMaxiColonne;
     private Color couleurFond = Color.WHITE;

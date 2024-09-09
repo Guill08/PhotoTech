@@ -7,8 +7,9 @@
 package faber.tool.alerte;
 
 
-import org.apache.logging.log4j.LogManager;
 
+import org.slf4j.Logger;
+ import org.slf4j.LoggerFactory;
 import javax.swing.*;
 
 /**
@@ -16,8 +17,9 @@ import javax.swing.*;
  * @author RDEV
  */
 public class Alerte {
-    private static final org.apache.logging.log4j.Logger LOGGER = LogManager.getLogger(Alerte.class.getName());
-    public static void afficherAlerteErreur(String message,Exception ex,org.apache.logging.log4j.Logger LOGGER,String nomClasse ){
+
+    final Logger logger = LoggerFactory.getLogger(Alerte.class);
+    public static void afficherAlerteErreur(String message,Exception ex,Logger LOGGER,String nomClasse ){
         LOGGER.error(message,nomClasse,ex);
         Boite.afficherBoiteAlerte("Erreur", message, JOptionPane.ERROR_MESSAGE);
     }

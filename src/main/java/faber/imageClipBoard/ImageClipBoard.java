@@ -1,7 +1,7 @@
 package faber.imageClipBoard;
 
 import faber.formulaire.pnlImage.PnlImage;
-import org.apache.logging.log4j.LogManager;
+
 
 import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
@@ -16,7 +16,7 @@ rsi
 13:20
 */
 public class ImageClipBoard {
-    private static final org.apache.logging.log4j.Logger LOGGER = LogManager.getLogger("application");
+
     //exemple : LOGGER.error( "msg", exception );
     private PnlImage pnlImage;
     private Image imageRedim;

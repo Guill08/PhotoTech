@@ -5,8 +5,10 @@
  */
 package faber.tool.connexion;
 
-import org.apache.logging.log4j.LogManager;
 
+
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -21,7 +23,7 @@ public class Connexion {
     private String user;
     private String pwd;
     private Connection connection = null;
-    private static final org.apache.logging.log4j.Logger LOGGER = LogManager.getLogger(Connexion.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Connexion.class.getName());
     public Connexion(String url, String user, String pwd) throws SQLException {
         super();
         this.url = url;

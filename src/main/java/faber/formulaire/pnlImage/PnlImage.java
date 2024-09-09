@@ -1,6 +1,6 @@
 package faber.formulaire.pnlImage;
 
-import org.apache.logging.log4j.LogManager;
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,7 +11,7 @@ rsi
 16:47
 */
 public class PnlImage extends JComponent {
-    private static final org.apache.logging.log4j.Logger LOGGER = LogManager.getLogger("application");
+
     //exemple : LOGGER.error( "msg", exception );
     private Image image;
 

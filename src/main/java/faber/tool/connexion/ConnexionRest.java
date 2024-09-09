@@ -1,6 +1,6 @@
 package faber.tool.connexion;
 
-import org.apache.logging.log4j.LogManager;
+
 
 import java.util.Base64;
 
@@ -10,7 +10,7 @@ RSI
 09:21
 */
 public class ConnexionRest {
-    private static final org.apache.logging.log4j.Logger LOGGER = LogManager.getLogger("application");
+
     private String user;
     private String baseDonnees;
     private String password;

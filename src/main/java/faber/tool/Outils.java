@@ -6,8 +6,9 @@
 package faber.tool;
 
 
-
-import org.apache.logging.log4j.LogManager;
+import faber.tool.connexion.ConnexionSQLServeur;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.jetbrains.annotations.Nullable;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
@@ -26,8 +27,8 @@ import java.text.SimpleDateFormat;
  * @author RDEV
  */
 public class Outils {
+    final Logger logger = LoggerFactory.getLogger(Outils.class);
 
-    private static final org.apache.logging.log4j.Logger LOGGER = LogManager.getLogger(Outils.class.getName());
 
     public static DateTime SqlDateTodateTimeNull(@Nullable Date dateSql) {
         DateTime dt = null;
@@ -75,7 +76,7 @@ public class Outils {
         return date;
     }
 
-    public static String dateTimeToString(DateTime date,String format) {
+    public static String dateTimeToString(DateTime date, String format) {
         DateFormat dateFormat = new SimpleDateFormat(format);
         return dateFormat.format(date.toDate());
     }
@@ -126,8 +127,9 @@ public class Outils {
         }
 
     }
+
     public static int mettreFormatMilliseconde(Double temps) {
-        double tempsEnSeconde = 3600 * temps*1000;
+        double tempsEnSeconde = 3600 * temps * 1000;
         int tempsEnSecondeInt = (int) tempsEnSeconde;
         return tempsEnSecondeInt;
     }

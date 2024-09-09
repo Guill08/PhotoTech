@@ -6,7 +6,7 @@ import faber.tool.connexion.ConnexionRest;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import org.apache.logging.log4j.LogManager;
+
 import org.jdesktop.beansbinding.Binding;
 import org.jdesktop.beansbinding.BindingGroup;
 import org.jetbrains.annotations.NotNull;
@@ -27,7 +27,7 @@ RSI
 07:31
 */
 public class Rest<E extends InterfaceRestPostTraitement> {
-    private static final org.apache.logging.log4j.Logger LOGGER = LogManager.getLogger("application");
+
     //exemple : LOGGER.error( "msg", exception );
 
     private TrustManager[] trustAllCerts;
