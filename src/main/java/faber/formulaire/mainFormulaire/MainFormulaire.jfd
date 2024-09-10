@@ -1,11 +1,11 @@
-JFDML JFormDesigner: "8.2.3.0.386" Java: "17.0.10" encoding: "UTF-8"
+JFDML JFormDesigner: "8.2.4.0.393" Java: "21.0.3" encoding: "UTF-8"
 
 new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class javax.swing.BoxLayout ) ) {
 			name: "this"
-			"title": "Déclaration des temps"
+			"title": "PhotoTech"
 			"defaultCloseOperation": 3
 			"minimumSize": new java.awt.Dimension( 200, 200 )
 			"iconImage": sfield com.jformdesigner.model.FormObject NULL_VALUE
@@ -44,8 +44,8 @@ new FormModel {
 				} )
 			}
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 1430, 835 )
+			"location": new java.awt.Point( 5, 0 )
+			"size": new java.awt.Dimension( 1425, 835 )
 		} )
 	}
 }

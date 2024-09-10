@@ -12,6 +12,7 @@ package faber.main;
 
 import com.formdev.flatlaf.FlatLightLaf;
 import faber.formulaire.mainFormulaire.MainFormulaire;
+import faber.objet.categorie.dao.DaoCategorie;
 import faber.objet.connexion.SqlLite;
 import faber.objet.metaDataFile.HashageFile;
 import faber.objet.metaDataFile.MetaDataFile;
@@ -114,11 +115,11 @@ public class Main {
         initialiserMainFormulaire();
         MetaDataFile metaDataFile = new MetaDataFile(new File("example.file"));
         metaDataFile.ajouterPopriete("test","Coucou");
-        System.out.println(metaDataFile.lirePropriete("test"));
-        String sha256Hash = HashageFile.calculateFileHash("example.file", "SHA-256");
-        System.out.println("SHA-256: " + sha256Hash);
+      //  System.out.println(metaDataFile.lirePropriete("test"));
+        //String sha256Hash = HashageFile.calculateFileHash("example.file", "SHA-256");
+        //System.out.println("SHA-256: " + sha256Hash);
         SqlLite sqlLite = new SqlLite("jdbc:sqlite:my.db");
-
+        DaoCategorie.select(sqlLite.getConn(), 0);
 
     }
 

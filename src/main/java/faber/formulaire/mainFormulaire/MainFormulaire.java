@@ -6,6 +6,7 @@ package faber.formulaire.mainFormulaire;
 
 import faber.alerte.Boite;
 
+import faber.formulaire.pnlTagFichier.PnlTagCategorie;
 import faber.imageClipBoard.ImageClipBoard;
 import faber.tool.configuration.objet.ConfigurationApplication;
 import gs.modele.ComboBoxModelGS;
@@ -56,7 +57,7 @@ public class MainFormulaire extends JFrame {
             }
         });
         //  initialiseDatePicker();
-
+        tabbedPane1.add(new PnlTagCategorie());
     }
 
 
@@ -113,7 +114,7 @@ public class MainFormulaire extends JFrame {
         tabbedPane1 = new JTabbedPane();
 
         //======== this ========
-        setTitle("D\u00e9claration des temps");
+        setTitle("PhotoTech");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new Dimension(200, 200));
         setIconImage(null);
