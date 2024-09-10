@@ -15,9 +15,9 @@ public class DaoCategorie {
         String requete = "select id,code,libelle,niveau,id_categorie_sup  from categorie where niveau = ?";
         preparedStatement = connection.prepareStatement(requete);
         preparedStatement.setInt(1, niveau);
-        ResultSet resultSet = preparedStatement.executeQuery();
-        while (resultSet.next()) {
-            Categorie categorie = new Categorie(resultSet.getString("code"), resultSet.getString("libelle"));
+        ResultSet rs = preparedStatement.executeQuery();
+        while (rs.next()) {
+            Categorie categorie = new Categorie(rs.getString("code"), rs.getString("libelle"),rs.getInt("id"));
             collectionCategorie.add(categorie);
             categorie.setCollectionSouSCategories(DaoCategorie.selectSousCategorie(connection,1,categorie));
 
@@ -32,9 +32,9 @@ public class DaoCategorie {
         preparedStatement = connection.prepareStatement(requete);
         preparedStatement.setInt(1, niveau);
         preparedStatement.setInt(2, categorie.getId());
-        ResultSet resultSet = preparedStatement.executeQuery();
-        while (resultSet.next()) {
-            Categorie sousCategorie = new Categorie(resultSet.getString("code"), resultSet.getString("libelle"));
+        ResultSet rs = preparedStatement.executeQuery();
+        while (rs.next()) {
+            Categorie sousCategorie = new Categorie(rs.getString("code"), rs.getString("libelle"),rs.getInt("id"));
             collectionCategorie.add(sousCategorie);
             sousCategorie.setCollectionSouSCategories(DaoCategorie.selectSousCategorie(connection,niveau+1,sousCategorie));
 
