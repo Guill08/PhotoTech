@@ -8,8 +8,7 @@ package faber.tool.parametre.dao;
 import faber.main.Main;
 import faber.tool.connexion.ConnexionSQLServeur;
 import faber.tool.parametre.ParametreApplicationEnum;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -22,7 +21,7 @@ import java.util.Map;
  * @author RDEV
  */
 public class DaoParametreApplication {
-    final Logger logger = LoggerFactory.getLogger(DaoParametreApplication.class);
+
 
 
     public static void select(HashMap<ParametreApplicationEnum, String> collectionParametre) throws SQLException {

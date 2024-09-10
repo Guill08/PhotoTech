@@ -1,8 +1,6 @@
 package faber.objet.bean;
 
 import faber.tool.connexion.ConnexionSQLServeur;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.net.ssl.*;
 import java.io.*;
@@ -18,7 +16,7 @@ RSI
 17:02
 */
 public class WebService {
-    final Logger logger = LoggerFactory.getLogger(WebService.class);
+
 //exemple : LOGGER.error( "msg", exception );
 
 

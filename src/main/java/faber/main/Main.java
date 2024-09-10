@@ -143,25 +143,25 @@ public class Main {
 
         // responsableDossierTechnique = configurationGenerale.getPropriete("responsableDossierTechnique");
 
-        try {
+   //     try {
             /*connexionErp = new Connexion(configurationGenerale.getPropriete("erp.url") + configurationGenerale.getPropriete("erp.base"), configurationGenerale.getPropriete("user"), configurationGenerale.getPropriete("password"));
             connexionQualite = new Connexion(configurationGenerale.getPropriete("qualite.url") + configurationGenerale.getPropriete("qualite.base"), configurationGenerale.getPropriete("user"), configurationGenerale.getPropriete("password"));*/
-            connexionServeur = new Connexion(configurationGenerale.getPropriete("serveur.url") + configurationGenerale.getPropriete("serveur.base"), configurationGenerale.getPropriete("user"), configurationGenerale.getPropriete("password"));
-            connexionVerrouServeur = new Connexion(configurationGenerale.getPropriete("serveur.url") + configurationGenerale.getPropriete("serveur.base"), configurationGenerale.getPropriete("user"), configurationGenerale.getPropriete("password"));
-            connexionRest = new ConnexionRest("WEBSERVICE", "FABER", "Faber2022", "https://svrerp:8443/rest/query/");
+//            connexionServeur = new Connexion(configurationGenerale.getPropriete("serveur.url") + configurationGenerale.getPropriete("serveur.base"), configurationGenerale.getPropriete("user"), configurationGenerale.getPropriete("password"));
+  //          connexionVerrouServeur = new Connexion(configurationGenerale.getPropriete("serveur.url") + configurationGenerale.getPropriete("serveur.base"), configurationGenerale.getPropriete("user"), configurationGenerale.getPropriete("password"));
+    //        connexionRest = new ConnexionRest("WEBSERVICE", "FABER", "Faber2022", "https://svrerp:8443/rest/query/");
 
 
             // connexionServeur = new Connexion(configurationGenerale.getPropriete("serveur.url") + configurationGenerale.getPropriete("serveur.base"), configurationGenerale.getPropriete("user"), configurationGenerale.getPropriete("password"));
             // connexionCompteur = new Connexion(configurationCompteur.getPropriete("serveur.url") + configurationCompteur.getPropriete("serveur.base"), configurationCompteur.getPropriete("user"), configurationCompteur.getPropriete("password"));
 
-        } catch (SQLException ex) {
+        /*} catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
 /*        ParametreApplication.ajouterParametre(ParametreApplicationEnum.COUTSUPPLEMENTAIRE);
         ParametreApplication.ajouterParametre(ParametreApplicationEnum.PORTTHEORIQUE);*/
-        ParametreApplication.initialiserConfiguration();
+/*        ParametreApplication.initialiserConfiguration();
 
-        DaoConfigurationApplication.select(connexionServeur);
+        DaoConfigurationApplication.select(connexionServeur);*/
 
     }
 

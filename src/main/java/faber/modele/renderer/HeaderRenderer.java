@@ -6,8 +6,7 @@
 package faber.modele.renderer;
 
 import faber.alerte.Alerte;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -21,7 +20,6 @@ import java.awt.*;
  * @author rdev
  */
 public class HeaderRenderer extends JLabel implements TableCellRenderer {
-    final Logger logger = LoggerFactory.getLogger(HeaderRenderer.class);
 
     private int largeur;
     private int nombreMaxiColonne;

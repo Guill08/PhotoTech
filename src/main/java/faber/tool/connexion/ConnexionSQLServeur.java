@@ -6,8 +6,7 @@
 package faber.tool.connexion;
 
 import faber.tool.alerte.Alerte;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -23,7 +22,7 @@ public class ConnexionSQLServeur {
     private String user;
     private String pwd;
     private Connection connection = null;
-    final Logger logger = LoggerFactory.getLogger(ConnexionSQLServeur.class);
+
 
     public ConnexionSQLServeur(String url, String user, String pwd) throws SQLException {
         super();

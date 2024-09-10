@@ -6,8 +6,7 @@
 package composantLink;
 
 import faber.modele.renderer.HeaderRenderer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 import java.util.ArrayList;
 
@@ -18,7 +17,6 @@ import java.util.ArrayList;
 public class CollectionComposantGraphique extends ArrayList<ComposantGraphique> {
 
 
-    final Logger logger = LoggerFactory.getLogger(CollectionComposantGraphique.class);
     public void miseAJourChamps() {
         for (int i = 0; i < this.size(); i++) {
             ComposantGraphique composantGraphique = this.get(i);

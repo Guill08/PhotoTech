@@ -11,7 +11,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="joda.time" level="project" />
     <orderEntry type="library" exported="" name="json" level="project" />
-    <orderEntry type="library" exported="" name="postgresql" level="application" />
     <orderEntry type="library" exported="" name="jdesktop.beansbinding" level="project" />
     <orderEntry type="module-library" exported="">
       <library name="miglayout.swing" type="repository">
@@ -35,16 +34,14 @@
     <orderEntry type="library" exported="" name="squareup.moshi" level="project" />
     <orderEntry type="library" exported="" name="squareup.moshi.adapters" level="project" />
     <orderEntry type="library" exported="" name="jdatepicker" level="project" />
-    <orderEntry type="library" exported="" name="apache.commons.lang3" level="application" />
     <orderEntry type="library" exported="" name="commons.configuration" level="project" />
     <orderEntry type="library" exported="" name="commons.beanutils" level="project" />
     <orderEntry type="library" exported="" name="commons.io" level="project" />
-    <orderEntry type="library" exported="" name="google.guava" level="application" />
     <orderEntry type="library" exported="" name="de.siegmar.fastcsv" level="project" />
-    <orderEntry type="library" name="formdev.flatlaf" level="application" />
+    <orderEntry type="library" name="formdev.flatlaf" level="project" />
+    <orderEntry type="library" name="apache.commons.lang3" level="project" />
+    <orderEntry type="library" name="commons-lang3-3.17.0" level="project" />
     <orderEntry type="library" name="xerial.sqlite.jdbc" level="project" />
-    <orderEntry type="library" name="slf4j.simple" level="application" />
-    <orderEntry type="library" name="slf4j.api" level="project" />
-    <orderEntry type="library" name="slf4j.log4j12" level="project" />
+    <orderEntry type="library" name="slf4j.nop" level="project" />
   </component>
 </module>
