@@ -34,6 +34,8 @@ public class PnlListeCategorie extends JPanel {
 
         }
         pnlTagFichier.add(this, "cell " + String.valueOf(niveau+1)+" 0");
+        pnlTagFichier.repaint();
+        pnlTagFichier.revalidate();
     }
 
     private void afficherToggleBoutonCategorie(Categorie categorie, int niveau) {
