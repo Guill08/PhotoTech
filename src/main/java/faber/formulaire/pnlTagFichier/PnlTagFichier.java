@@ -9,14 +9,22 @@ import faber.formulaire.pnlTagFichier.pnlListeCategorie.*;
 import faber.main.Main;
 import net.miginfocom.swing.*;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  * @author rsi@BAZEILLES.local
  */
 public class PnlTagFichier extends JPanel {
+    private HashMap<Integer,PnlListeCategorie> collectionPnlListeCategorie = new  HashMap<Integer,PnlListeCategorie>();
 
     public PnlTagFichier() {
         initComponents();
         createUIComponents();
+    }
+
+    public HashMap<Integer, PnlListeCategorie> getCollectionPnlListeCategorie() {
+        return collectionPnlListeCategorie;
     }
 
     private void createUIComponents() {

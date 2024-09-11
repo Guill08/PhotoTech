@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.HashMap;
 import javax.swing.*;
 
 import faber.formulaire.pnlTagFichier.PnlTagFichier;
@@ -19,7 +20,9 @@ import faber.objet.categorie.Categorie;
  */
 public class PnlListeCategorie extends JPanel {
     private ArrayList<Categorie> collectionCategorie = new ArrayList<>();
-    private  PnlTagFichier pnlTagFichier;
+    private PnlTagFichier pnlTagFichier;
+    private PnlListeCategorie pnlListeCategorieDecendant;
+    private int niveau;
 
     public PnlListeCategorie() {
         initComponents();
@@ -28,14 +31,24 @@ public class PnlListeCategorie extends JPanel {
     public PnlListeCategorie(ArrayList<Categorie> collectionCategorie, PnlTagFichier pnlTagFichier, int niveau) {
         this.collectionCategorie = collectionCategorie;
         this.pnlTagFichier = pnlTagFichier;
+        this.pnlTagFichier.getCollectionPnlListeCategorie().put(niveau, this);
+        this.niveau = niveau;
         initComponents();
-        for (Categorie categorie : collectionCategorie) {
-            afficherToggleBoutonCategorie(categorie,niveau+1);
 
+        for (Categorie categorie : collectionCategorie) {
+            afficherToggleBoutonCategorie(categorie, niveau);
         }
-        pnlTagFichier.add(this, "cell " + String.valueOf(niveau+1)+" 0");
+        pnlTagFichier.add(this, "cell " + String.valueOf(niveau + 1) + " 0");
         pnlTagFichier.repaint();
         pnlTagFichier.revalidate();
+    }
+
+    public PnlListeCategorie getPnlListeCategorieDecendant() {
+        return pnlListeCategorieDecendant;
+    }
+
+    public void setPnlListeCategorieDecendant(PnlListeCategorie pnlListeCategorieDecendant) {
+        this.pnlListeCategorieDecendant = pnlListeCategorieDecendant;
     }
 
     private void afficherToggleBoutonCategorie(Categorie categorie, int niveau) {
@@ -50,14 +63,24 @@ public class PnlListeCategorie extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                ArrayList<Categorie>collectionCategorie = categorie.getCollectionSouSCategories();
-                int niveau = collectionCategorie.get(0).getNiveau();
-                PnlListeCategorie pnlListeCategorie = new PnlListeCategorie(collectionCategorie,pnlTagFichier,niveau);
-           /*     for (Categorie categorie1 : collectionCategorie) {
-                   pnlTagFichier.add(PnlListeCategorie.this, "cell " + String.valueOf(niveau+1 )+" 0");
+                ArrayList<Categorie> collectionCategorie = categorie.getCollectionSouSCategories();
+                if (collectionCategorie.size() > 0) {
+                    supprimerPnlListeCategorieSousJacent(pnlTagFichier, PnlListeCategorie.this.niveau);
+                    int niveau = collectionCategorie.get(0).getNiveau();
+                    PnlListeCategorie pnlListeCategorie = new PnlListeCategorie(collectionCategorie, pnlTagFichier, niveau);
+                }
 
-                   afficherToggleBoutonCategorie(categorie1, categorie1.getNiveau());
-                }*/
+            }
+
+            private void supprimerPnlListeCategorieSousJacent(PnlTagFichier pnlTagFichier, int niveau) {
+                HashMap<Integer, PnlListeCategorie> collectionPnlListeCategorie = pnlTagFichier.getCollectionPnlListeCategorie();
+                for (int i = niveau+1 ; i < collectionPnlListeCategorie.size(); i++) {
+                    PnlListeCategorie pnlListeCategorie = collectionPnlListeCategorie.get(i);
+                        pnlTagFichier.remove(pnlListeCategorie);
+                        pnlTagFichier.repaint();
+                        pnlTagFichier.revalidate();
+
+                }
             }
         });
         add(toggleButton);
