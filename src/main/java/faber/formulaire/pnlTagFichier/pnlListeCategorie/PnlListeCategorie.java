@@ -64,21 +64,24 @@ public class PnlListeCategorie extends JPanel {
             public void actionPerformed(ActionEvent e) {
 
                 ArrayList<Categorie> collectionCategorie = categorie.getCollectionSouSCategories();
+                int niveau = collectionCategorie.get(0).getNiveau();
                 if (collectionCategorie.size() > 0) {
-                    supprimerPnlListeCategorieSousJacent(pnlTagFichier, PnlListeCategorie.this.niveau);
-                    int niveau = collectionCategorie.get(0).getNiveau();
-                    PnlListeCategorie pnlListeCategorie = new PnlListeCategorie(collectionCategorie, pnlTagFichier, niveau);
+                    supprimerPnlListeCategorieSousJacent(pnlTagFichier, PnlListeCategorie.this.niveau+1);
+                    PnlListeCategorie pnlListeCategorie = new PnlListeCategorie(collectionCategorie, pnlTagFichier, PnlListeCategorie.this.niveau+1);
                 }
 
             }
 
             private void supprimerPnlListeCategorieSousJacent(PnlTagFichier pnlTagFichier, int niveau) {
                 HashMap<Integer, PnlListeCategorie> collectionPnlListeCategorie = pnlTagFichier.getCollectionPnlListeCategorie();
-                for (int i = niveau+1 ; i < collectionPnlListeCategorie.size(); i++) {
-                    PnlListeCategorie pnlListeCategorie = collectionPnlListeCategorie.get(i);
+                for (int i = 0; i <= collectionPnlListeCategorie.size()-1; i++) {
+                    if (i >= niveau) {
+                        PnlListeCategorie pnlListeCategorie = collectionPnlListeCategorie.get(i);
                         pnlTagFichier.remove(pnlListeCategorie);
                         pnlTagFichier.repaint();
                         pnlTagFichier.revalidate();
+                    }
+
 
                 }
             }
