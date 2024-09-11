@@ -8,7 +8,7 @@ public class Categorie  {
     private ArrayList<Categorie> collectionSouSCategories = new ArrayList<>();
     private int niveau =0;
     private int id =0;
-    public Categorie(String libelle, String code,int id) {
+    public Categorie(String code,String libelle,int id) {
         this.libelle = libelle;
         this.code = code;
         this.id = id;

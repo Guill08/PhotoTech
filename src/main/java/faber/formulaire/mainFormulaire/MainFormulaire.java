@@ -6,7 +6,7 @@ package faber.formulaire.mainFormulaire;
 
 import faber.alerte.Boite;
 
-import faber.formulaire.pnlTagFichier.PnlTagCategorie;
+import faber.formulaire.pnlTagFichier.PnlTagFichier;
 import faber.imageClipBoard.ImageClipBoard;
 import faber.tool.configuration.objet.ConfigurationApplication;
 import gs.modele.ComboBoxModelGS;
@@ -35,6 +35,7 @@ import java.util.logging.Logger;
  */
 public class MainFormulaire extends JFrame {
 
+    private PnlTagFichier pnlTagCategorie;
     private ComboBoxModelGS modelLiaison;
     private ComboBoxModelGS modeleDonnees;
     private ComboBoxModelGS modelEdi;
@@ -44,7 +45,8 @@ public class MainFormulaire extends JFrame {
     private JDatePickerImpl datePicker;
 
 
-    public MainFormulaire() throws SQLException, ErreurCritereManquant, ErreurValeurIncorrecte, ErreurInterval {
+    public MainFormulaire(PnlTagFichier pnlTagFichier) throws SQLException, ErreurCritereManquant, ErreurValeurIncorrecte, ErreurInterval {
+        this.pnlTagCategorie = pnlTagFichier;
         initComponents();
 
         URL urlIconeApplication = getClass().getClassLoader().getResource("png/application.png");
@@ -57,7 +59,7 @@ public class MainFormulaire extends JFrame {
             }
         });
         //  initialiseDatePicker();
-        tabbedPane1.add(new PnlTagCategorie());
+        tabbedPane1.add(pnlTagFichier);
     }
 
 

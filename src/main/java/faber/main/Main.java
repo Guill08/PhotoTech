@@ -12,13 +12,12 @@ package faber.main;
 
 import com.formdev.flatlaf.FlatLightLaf;
 import faber.formulaire.mainFormulaire.MainFormulaire;
+import faber.formulaire.pnlTagFichier.PnlTagFichier;
+import faber.objet.categorie.Categorie;
 import faber.objet.categorie.dao.DaoCategorie;
 import faber.objet.connexion.SqlLite;
-import faber.objet.metaDataFile.HashageFile;
-import faber.objet.metaDataFile.MetaDataFile;
 import faber.tool.alerte.Boite;
 import faber.tool.configuration.Configuration;
-import faber.tool.configuration.dao.DaoConfigurationApplication;
 import faber.tool.configuration.objet.ConfigurationApplication;
 import faber.tool.connexion.Connexion;
 import faber.tool.connexion.ConnexionRest;
@@ -35,12 +34,11 @@ import org.joda.time.LocalDate;
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Faker faker = new Faker(new Locale("fr"));
@@ -99,10 +97,8 @@ public class Main {
     public static ParametreApplication parametreApplication;
     public static MainFormulaire mainFormulaire;
     public static ConnexionRest connexionRest;
-
-
-
-
+    public static Connection connection;
+    public static ArrayList<Categorie> collectionCategorie;
     private static HashMap<String, String> collectionCategorieCout = new HashMap<String, String>();
 
 
@@ -111,17 +107,18 @@ public class Main {
     public static void main(String[] args) throws Exception {
         Main.initialiserVariablesGlobales();
         Main.initialiserCollections();
-      //  Main.intialiserIcones();
+        Connection connectionSqlLite = new SqlLite("jdbc:sqlite:my.db").getConn();
+        collectionCategorie = DaoCategorie.select(connectionSqlLite, 0);
         initialiserMainFormulaire();
-        MetaDataFile metaDataFile = new MetaDataFile(new File("example.file"));
-        metaDataFile.ajouterPopriete("test","Coucou");
+/*        MetaDataFile metaDataFile = new MetaDataFile(new File("example.file"));
+        metaDataFile.ajouterPopriete("test","Coucou");*/
       //  System.out.println(metaDataFile.lirePropriete("test"));
         //String sha256Hash = HashageFile.calculateFileHash("example.file", "SHA-256");
         //System.out.println("SHA-256: " + sha256Hash);
-        SqlLite sqlLite = new SqlLite("jdbc:sqlite:my.db");
-        DaoCategorie.select(sqlLite.getConn(), 0);
+
 
     }
+
 
 
     private static void initialiserVariablesGlobales() throws SQLException {
@@ -133,36 +130,8 @@ public class Main {
         dateDebutMois = new LocalDate(annee, mois, 1).toDate();
         Configuration configurationCompteur = new Configuration("conf/compteur.properties");
         Configuration configurationGenerale = new Configuration();
-
         Configuration configurationUtilisateur = new Configuration("confuser/user.properties");
-        //codeUtilisateur = configurationUtilisateur.getPropriete("code");
 
-
-
-        //  IntelliJTheme.install(Main.class.getResourceAsStream("/arc-theme-orange.theme.json"));
-
-
-        // responsableDossierTechnique = configurationGenerale.getPropriete("responsableDossierTechnique");
-
-   //     try {
-            /*connexionErp = new Connexion(configurationGenerale.getPropriete("erp.url") + configurationGenerale.getPropriete("erp.base"), configurationGenerale.getPropriete("user"), configurationGenerale.getPropriete("password"));
-            connexionQualite = new Connexion(configurationGenerale.getPropriete("qualite.url") + configurationGenerale.getPropriete("qualite.base"), configurationGenerale.getPropriete("user"), configurationGenerale.getPropriete("password"));*/
-//            connexionServeur = new Connexion(configurationGenerale.getPropriete("serveur.url") + configurationGenerale.getPropriete("serveur.base"), configurationGenerale.getPropriete("user"), configurationGenerale.getPropriete("password"));
-  //          connexionVerrouServeur = new Connexion(configurationGenerale.getPropriete("serveur.url") + configurationGenerale.getPropriete("serveur.base"), configurationGenerale.getPropriete("user"), configurationGenerale.getPropriete("password"));
-    //        connexionRest = new ConnexionRest("WEBSERVICE", "FABER", "Faber2022", "https://svrerp:8443/rest/query/");
-
-
-            // connexionServeur = new Connexion(configurationGenerale.getPropriete("serveur.url") + configurationGenerale.getPropriete("serveur.base"), configurationGenerale.getPropriete("user"), configurationGenerale.getPropriete("password"));
-            // connexionCompteur = new Connexion(configurationCompteur.getPropriete("serveur.url") + configurationCompteur.getPropriete("serveur.base"), configurationCompteur.getPropriete("user"), configurationCompteur.getPropriete("password"));
-
-        /*} catch (SQLException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
-/*        ParametreApplication.ajouterParametre(ParametreApplicationEnum.COUTSUPPLEMENTAIRE);
-        ParametreApplication.ajouterParametre(ParametreApplicationEnum.PORTTHEORIQUE);*/
-/*        ParametreApplication.initialiserConfiguration();
-
-        DaoConfigurationApplication.select(connexionServeur);*/
 
     }
 
@@ -188,7 +157,7 @@ public class Main {
                 dureeTravailLegaleSemaine = Double.valueOf(parametreApplication.getDureeTravailLegaleSemaine().getValeur());
 */
                 try {
-                    Main.mainFormulaire = new MainFormulaire();
+                    Main.mainFormulaire = new MainFormulaire(new PnlTagFichier());
                     mainFormulaire.setVisible(true);
                     mainFormulaire.setExtendedState(mainFormulaire.getExtendedState() | mainFormulaire.MAXIMIZED_BOTH);
                     String version = mainFormulaire.getMenuItem2().getText();
