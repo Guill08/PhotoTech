@@ -12,7 +12,6 @@ import java.util.HashMap;
 import javax.swing.*;
 
 import faber.formulaire.pnlTagFichier.PnlTagFichier;
-import faber.main.Main;
 import faber.objet.categorie.Categorie;
 
 /**
@@ -34,9 +33,10 @@ public class PnlListeCategorie extends JPanel {
         this.pnlTagFichier.getCollectionPnlListeCategorie().put(niveau, this);
         this.niveau = niveau;
         initComponents();
-
+        ButtonGroup bg = new ButtonGroup();
         for (Categorie categorie : collectionCategorie) {
-            afficherToggleBoutonCategorie(categorie, niveau);
+
+            afficherToggleBoutonCategorie(categorie, niveau,bg);
         }
         pnlTagFichier.add(this, "cell " + String.valueOf(niveau + 1) + " 0");
         pnlTagFichier.repaint();
@@ -51,10 +51,11 @@ public class PnlListeCategorie extends JPanel {
         this.pnlListeCategorieDecendant = pnlListeCategorieDecendant;
     }
 
-    private void afficherToggleBoutonCategorie(Categorie categorie, int niveau) {
+    private void afficherToggleBoutonCategorie(Categorie categorie, int niveau, ButtonGroup bg) {
 
 
         JToggleButton toggleButton = new JToggleButton();
+        bg.add(toggleButton);
         toggleButton.setMinimumSize(new Dimension(150, 30));
         toggleButton.setMaximumSize(new Dimension(150, 30));
         toggleButton.setPreferredSize(new Dimension(150, 30));
