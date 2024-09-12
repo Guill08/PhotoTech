@@ -63,13 +63,17 @@ public class PnlListeCategorie extends JPanel {
         toggleButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                ArrayList<Categorie> collectionCategorie = categorie.getCollectionSouSCategories();
-                int niveau = collectionCategorie.get(0).getNiveau();
-                if (collectionCategorie.size() > 0) {
-                    supprimerPnlListeCategorieSousJacent(pnlTagFichier, PnlListeCategorie.this.niveau+1);
-                    PnlListeCategorie pnlListeCategorie = new PnlListeCategorie(collectionCategorie, pnlTagFichier, PnlListeCategorie.this.niveau+1);
+                if (pnlTagFichier.getCollectionPnlMiniature().size() > 0) {
+                    ArrayList<Categorie> collectionCategorie = categorie.getCollectionSouSCategories();
+                    int niveau = collectionCategorie.get(0).getNiveau();
+                    if (collectionCategorie.size() > 0) {
+                        supprimerPnlListeCategorieSousJacent(pnlTagFichier, PnlListeCategorie.this.niveau + 1);
+                        PnlListeCategorie pnlListeCategorie = new PnlListeCategorie(collectionCategorie, pnlTagFichier, PnlListeCategorie.this.niveau + 1);
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(PnlListeCategorie.this.pnlTagFichier,"Merci de saisir un photo !","Aucune saisie",JOptionPane.WARNING_MESSAGE);
                 }
+
 
             }
 
