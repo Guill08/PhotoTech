@@ -98,6 +98,7 @@ public class Main {
     public static MainFormulaire mainFormulaire;
     public static ConnexionRest connexionRest;
     public static Connection connection;
+    public static Connection connectionSqlLite;
     public static ArrayList<Categorie> collectionCategorie;
     private static HashMap<String, String> collectionCategorieCout = new HashMap<String, String>();
 
@@ -107,7 +108,8 @@ public class Main {
     public static void main(String[] args) throws Exception {
         Main.initialiserVariablesGlobales();
         Main.initialiserCollections();
-        Connection connectionSqlLite = new SqlLite("jdbc:sqlite:my.db").getConn();
+        connectionSqlLite = new SqlLite("jdbc:sqlite:my.db").getConn();
+
         collectionCategorie = DaoCategorie.select(connectionSqlLite, 0);
         initialiserMainFormulaire();
 /*        MetaDataFile metaDataFile = new MetaDataFile(new File("example.file"));
@@ -119,7 +121,9 @@ public class Main {
 
     }
 
-
+    public static Connection getConnectionSqlLite() {
+        return connectionSqlLite;
+    }
 
     private static void initialiserVariablesGlobales() throws SQLException {
         DateTime dateDuJour = DateTime.now();

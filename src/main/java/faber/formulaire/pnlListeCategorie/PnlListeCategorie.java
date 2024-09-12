@@ -7,16 +7,16 @@ package faber.formulaire.pnlListeCategorie;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
-import java.security.NoSuchAlgorithmException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.swing.*;
 
 import faber.formulaire.pnlTagFichier.PnlTagFichier;
+import faber.main.Main;
 import faber.objet.categorie.Categorie;
-import faber.objet.metaDataFile.HashageFile;
 import faber.objet.photo.Photo;
+import faber.objet.photo.dao.DaoPhoto;
 
 /**
  * @author rsi@BAZEILLES.local
@@ -75,10 +75,15 @@ public class PnlListeCategorie extends JPanel {
                         PnlListeCategorie pnlListeCategorie = new PnlListeCategorie(collectionCategorie, pnlTagFichier, PnlListeCategorie.this.niveau + 1);
                     }
                     for (Photo photo : pnlTagFichier.getCollectionPhoto()) {
-
                         photo.getCollectionMetaDataFile().add(categorie);
-
+                        try {
+                            DaoPhoto.insertCategorie(Main.getConnectionSqlLite(),photo,categorie);
+                            DaoPhoto.insert(Main.getConnectionSqlLite(),photo);
+                        } catch (SQLException ex) {
+                            throw new RuntimeException(ex);
+                        }
                     }
+
                 } else {
                     JOptionPane.showMessageDialog(PnlListeCategorie.this.pnlTagFichier, "Merci de saisir un photo !", "Aucune saisie", JOptionPane.WARNING_MESSAGE);
                 }
