@@ -5,14 +5,14 @@
 package faber.formulaire.pnlTagFichier;
 
 import java.awt.*;
-import javax.imageio.ImageIO;
 import javax.swing.*;
 
-import faber.formulaire.pnlTagFichier.pnlListeCategorie.*;
+import faber.formulaire.PnlMiniature;
+import faber.formulaire.pnlListeCategorie.*;
 import faber.main.Main;
+import faber.objet.photo.Photo;
 import net.miginfocom.swing.*;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
@@ -27,10 +27,14 @@ import java.util.HashMap;
  */
 public class PnlTagFichier extends JPanel {
     private HashMap<Integer, PnlListeCategorie> collectionPnlListeCategorie = new HashMap<Integer, PnlListeCategorie>();
-
+    private ArrayList<PnlMiniature> collectionPnlMiniature = new ArrayList<PnlMiniature>();
     public PnlTagFichier() {
         initComponents();
         createUIComponents();
+    }
+
+    public ArrayList<PnlMiniature> getCollectionPnlMiniature() {
+        return collectionPnlMiniature;
     }
 
     public HashMap<Integer, PnlListeCategorie> getCollectionPnlListeCategorie() {
@@ -66,45 +70,9 @@ public class PnlTagFichier extends JPanel {
         // Try-with-resources to ensure the DirectoryStream is closed
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(path)) {
             for (Path entry : stream) {
-                String inputImagePath = entry.toAbsolutePath().toString();
-                String outputImagePath = "\\mini\\" + entry.getFileName().toString();
-                int scaledWidth = 150;
-                int scaledHeight = 150;
-                // Lire l'image d'entrée
-                File inputFile = new File(entry.toAbsolutePath().toString());
-                BufferedImage inputImage = ImageIO.read(inputFile);
-                // Calculer les nouvelles dimensions tout en conservant le ratio d'aspect
-                int originalWidth = inputImage.getWidth();
-                int originalHeight = inputImage.getHeight();
-                int newWidth = originalWidth;
-                int newHeight = originalHeight;
+                Photo photo = new Photo(new File(entry.toUri()));
 
-                if (originalWidth > originalHeight) {
-                    newWidth = maxDim;
-                    newHeight = (maxDim * originalHeight) / originalWidth;
-                } else {
-                    newHeight = maxDim;
-                    newWidth = (maxDim * originalWidth) / originalHeight;
-                }
-                // Crée une nouvelle image redimensionnée
-                BufferedImage outputImage = new BufferedImage(newWidth, newHeight, inputImage.getType());
-
-                // Dessiner l'image redimensionnée
-                Graphics2D g2d = outputImage.createGraphics();
-                g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-                g2d.drawImage(inputImage, 0, 0, newWidth, newHeight, null);
-                g2d.dispose();
-                // Extraire l'extension du fichier à partir du chemin de sortie
-                String formatName = outputImagePath.substring(outputImagePath.lastIndexOf(".") + 1);
-
-                // Écrire l'image redimensionnée dans le fichier de sortie
-                ImageIO.write(outputImage, formatName, new File(outputImagePath));
-
-
-                // ImageIcon imageIcon = new ImageIcon(entry.toAbsolutePath().toString());
-                ImageIcon imageIcon = new ImageIcon("\\mini\\" + entry.getFileName().toString());
-                JLabel label1 = new JLabel(imageIcon);
-                pnlListePhoto.add(label1);
+                pnlListePhoto.add(new PnlMiniature(new BorderLayout(), photo,this));
                 pnlListePhoto.add(Box.createRigidArea(new Dimension(60, 0)));
             }
         } catch (IOException e) {

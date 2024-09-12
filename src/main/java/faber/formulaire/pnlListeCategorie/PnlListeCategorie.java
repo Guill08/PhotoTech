@@ -2,7 +2,7 @@
  * Created by JFormDesigner on Tue Sep 10 16:34:18 CEST 2024
  */
 
-package faber.formulaire.pnlTagFichier.pnlListeCategorie;
+package faber.formulaire.pnlListeCategorie;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
