@@ -27,14 +27,14 @@ import java.util.HashMap;
  */
 public class PnlTagFichier extends JPanel {
     private HashMap<Integer, PnlListeCategorie> collectionPnlListeCategorie = new HashMap<Integer, PnlListeCategorie>();
-    private ArrayList<PnlMiniature> collectionPnlMiniature = new ArrayList<PnlMiniature>();
+    private ArrayList<Photo> collectionPhoto = new ArrayList<Photo>();
     public PnlTagFichier() {
         initComponents();
         createUIComponents();
     }
 
-    public ArrayList<PnlMiniature> getCollectionPnlMiniature() {
-        return collectionPnlMiniature;
+    public ArrayList<Photo> getCollectionPhoto() {
+        return collectionPhoto;
     }
 
     public HashMap<Integer, PnlListeCategorie> getCollectionPnlListeCategorie() {

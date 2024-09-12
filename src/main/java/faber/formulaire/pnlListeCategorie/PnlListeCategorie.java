@@ -7,12 +7,16 @@ package faber.formulaire.pnlListeCategorie;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.swing.*;
 
 import faber.formulaire.pnlTagFichier.PnlTagFichier;
 import faber.objet.categorie.Categorie;
+import faber.objet.metaDataFile.HashageFile;
+import faber.objet.photo.Photo;
 
 /**
  * @author rsi@BAZEILLES.local
@@ -36,7 +40,7 @@ public class PnlListeCategorie extends JPanel {
         ButtonGroup bg = new ButtonGroup();
         for (Categorie categorie : collectionCategorie) {
 
-            afficherToggleBoutonCategorie(categorie, niveau,bg);
+            afficherToggleBoutonCategorie(categorie, niveau, bg);
         }
         pnlTagFichier.getPnlPnlListeCategorie().add(this, "cell " + String.valueOf(niveau + 1) + " 0");
         pnlTagFichier.repaint();
@@ -63,15 +67,20 @@ public class PnlListeCategorie extends JPanel {
         toggleButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (pnlTagFichier.getCollectionPnlMiniature().size() > 0) {
+                if (pnlTagFichier.getCollectionPhoto().size() > 0) {
                     ArrayList<Categorie> collectionCategorie = categorie.getCollectionSouSCategories();
                     int niveau = collectionCategorie.get(0).getNiveau();
                     if (collectionCategorie.size() > 0) {
                         supprimerPnlListeCategorieSousJacent(pnlTagFichier, PnlListeCategorie.this.niveau + 1);
                         PnlListeCategorie pnlListeCategorie = new PnlListeCategorie(collectionCategorie, pnlTagFichier, PnlListeCategorie.this.niveau + 1);
                     }
+                    for (Photo photo : pnlTagFichier.getCollectionPhoto()) {
+
+                        photo.getCollectionMetaDataFile().add(categorie);
+
+                    }
                 } else {
-                    JOptionPane.showMessageDialog(PnlListeCategorie.this.pnlTagFichier,"Merci de saisir un photo !","Aucune saisie",JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(PnlListeCategorie.this.pnlTagFichier, "Merci de saisir un photo !", "Aucune saisie", JOptionPane.WARNING_MESSAGE);
                 }
 
 
@@ -79,7 +88,7 @@ public class PnlListeCategorie extends JPanel {
 
             private void supprimerPnlListeCategorieSousJacent(PnlTagFichier pnlTagFichier, int niveau) {
                 HashMap<Integer, PnlListeCategorie> collectionPnlListeCategorie = pnlTagFichier.getCollectionPnlListeCategorie();
-                for (int i = 0; i <= collectionPnlListeCategorie.size()-1; i++) {
+                for (int i = 0; i <= collectionPnlListeCategorie.size() - 1; i++) {
                     if (i >= niveau) {
                         PnlListeCategorie pnlListeCategorie = collectionPnlListeCategorie.get(i);
                         pnlTagFichier.remove(pnlListeCategorie);
