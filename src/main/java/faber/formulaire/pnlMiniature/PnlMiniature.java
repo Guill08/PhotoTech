@@ -1,4 +1,4 @@
-package faber.formulaire;
+package faber.formulaire.pnlMiniature;
 
 import faber.formulaire.pnlTagFichier.PnlTagFichier;
 import faber.objet.metaDataFile.HashageFile;

@@ -7,7 +7,7 @@ package faber.formulaire.pnlTagFichier;
 import java.awt.*;
 import javax.swing.*;
 
-import faber.formulaire.PnlMiniature;
+import faber.formulaire.pnlMiniature.PnlMiniature;
 import faber.formulaire.pnlListeCategorie.*;
 import faber.main.Main;
 import faber.objet.photo.Photo;
