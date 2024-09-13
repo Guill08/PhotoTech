@@ -12,6 +12,7 @@ package faber.main;
 
 import com.formdev.flatlaf.FlatLightLaf;
 import faber.formulaire.mainFormulaire.MainFormulaire;
+import faber.formulaire.pnlTagFichier.PnlRechercherFichier;
 import faber.formulaire.pnlTagFichier.PnlTagFichier;
 import faber.objet.categorie.Categorie;
 import faber.objet.categorie.dao.DaoCategorie;
@@ -161,7 +162,7 @@ public class Main {
                 dureeTravailLegaleSemaine = Double.valueOf(parametreApplication.getDureeTravailLegaleSemaine().getValeur());
 */
                 try {
-                    Main.mainFormulaire = new MainFormulaire(new PnlTagFichier());
+                    Main.mainFormulaire = new MainFormulaire(new PnlTagFichier(),new PnlRechercherFichier());
                     mainFormulaire.setVisible(true);
                     mainFormulaire.setExtendedState(mainFormulaire.getExtendedState() | mainFormulaire.MAXIMIZED_BOTH);
                     String version = mainFormulaire.getMenuItem2().getText();

@@ -22,10 +22,10 @@ import faber.objet.photo.dao.DaoPhoto;
  * @author rsi@BAZEILLES.local
  */
 public class PnlListeCategorie extends JPanel {
-    private ArrayList<Categorie> collectionCategorie = new ArrayList<>();
-    private PnlTagFichier pnlTagFichier;
-    private PnlListeCategorie pnlListeCategorieDecendant;
-    private int niveau;
+    protected ArrayList<Categorie> collectionCategorie = new ArrayList<>();
+    protected PnlTagFichier pnlTagFichier;
+    protected PnlListeCategorie pnlListeCategorieDecendant;
+    protected int niveau;
 
     public PnlListeCategorie() {
         initComponents();
@@ -59,7 +59,7 @@ public class PnlListeCategorie extends JPanel {
         this.pnlListeCategorieDecendant = pnlListeCategorieDecendant;
     }
 
-    private void afficherToggleBoutonCategorie(Categorie categorie, int niveau, ButtonGroup bg) {
+    protected void afficherToggleBoutonCategorie(Categorie categorie, int niveau, ButtonGroup bg) {
 
 
         BtnCategorie toggleButton = new BtnCategorie(pnlTagFichier, categorie, this);
@@ -81,10 +81,10 @@ public class PnlListeCategorie extends JPanel {
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
 class BtnCategorie extends JToggleButton {
-    private final PnlTagFichier pnlTagFichier;
-    private final Categorie categorie;
-    private final PnlListeCategorie     pnlListeCategorie;
-    private final int niveau;
+    protected final PnlTagFichier pnlTagFichier;
+    protected final Categorie categorie;
+    protected final PnlListeCategorie     pnlListeCategorie;
+    protected final int niveau;
 
     public BtnCategorie(PnlTagFichier pnlTagFichier, Categorie categorie,PnlListeCategorie pnlListeCategorie) {
         super();
@@ -99,7 +99,7 @@ class BtnCategorie extends JToggleButton {
         initialiserListener();
     }
 
-    private void initialiserListener() {
+    protected void initialiserListener() {
         this.addActionListener(new ListenerBtnCategorie(categorie,pnlTagFichier,pnlListeCategorie));
 
     }
@@ -108,10 +108,10 @@ class BtnCategorie extends JToggleButton {
 }
 class ListenerBtnCategorie implements ActionListener {
 
-    private final Categorie categorie;
-    private final PnlTagFichier pnlTagFichier;
-    private final PnlListeCategorie pnlListeCategorie;
-    private final int niveau;
+    protected final Categorie categorie;
+    protected final PnlTagFichier pnlTagFichier;
+    protected final PnlListeCategorie pnlListeCategorie;
+    protected final int niveau;
 
     public ListenerBtnCategorie(Categorie categorie, PnlTagFichier pnlTagFichier, PnlListeCategorie pnlListeCategorie) {
         this.categorie = categorie;

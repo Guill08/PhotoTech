@@ -45,7 +45,7 @@ public class PnlTagFichier extends JPanel {
         return pnlPnlListeCategorie;
     }
 
-    private void createUIComponents() {
+    public void createUIComponents() {
 
         PnlListeCategorie panel1 = new PnlListeCategorie(Main.collectionCategorie, this, 0);
         //   add(panel1, "cell 1 0");
