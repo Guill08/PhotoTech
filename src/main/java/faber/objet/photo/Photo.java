@@ -20,7 +20,8 @@ public class Photo {
     public Photo(File file) throws IOException {
         this.file = file;
         this.imageIcon = new ImageIcon(file.getPath());
-        this.miniature = new Miniature(imageIcon,file.toPath());
+        this.miniature = new Miniature(this);
+
     }
     public String getHashage() {
         return hashage;

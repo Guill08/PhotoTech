@@ -1,5 +1,7 @@
 package faber.objet.miniature;
 
+import faber.objet.photo.Photo;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -11,13 +13,12 @@ import java.nio.file.Path;
 public class Miniature {
     private final ImageIcon imageRedimensionnee;
     private final Path  entry;
-
-    public Miniature(ImageIcon imageIcon, Path entry) throws IOException {
-        this.entry = entry;
-        this.imageRedimensionnee = creerImageMiniature(imageIcon);
-
-
-    }
+    private final Photo photo;
+       public Miniature(Photo photo) throws IOException {
+        this.entry = photo.getFile().toPath();
+        this.imageRedimensionnee = creerImageMiniature(photo.getImageIcon());
+        this.photo = photo;
+       }
 
     public Path getEntry() {
         return entry;
@@ -29,8 +30,9 @@ public class Miniature {
 
 
     private ImageIcon creerImageMiniature(ImageIcon imageIcon) throws IOException {
-        String inputImagePath = entry.getFileName().toString();
-        String outputImagePath = "\\mini\\" + entry.getFileName().toString();
+        String nomFichier = photo.getHashage();
+
+        String outputImagePath = "data/mini/" + entry.getFileName().toString();
         int scaledWidth = 150;
         int scaledHeight = 150;
         int maxDim = 150;
@@ -62,6 +64,6 @@ public class Miniature {
 
         // Écrire l'image redimensionnée dans le fichier de sortie
         ImageIO.write(outputImage, formatName, new File(outputImagePath));
-        return new ImageIcon("\\mini\\" + entry.getFileName().toString());
+        return new ImageIcon("data/mini/" + entry.getFileName().toString());
     }
 }
