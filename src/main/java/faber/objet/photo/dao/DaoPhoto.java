@@ -27,4 +27,9 @@ public class DaoPhoto {
 
     }
 
+    public static void select(Connection connection, Photo photo) throws SQLException {
+        String requete = "SELECT * FROM photo_categorie WHERE id_categorie IN ";
+
+
+    }
 }

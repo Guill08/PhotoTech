@@ -23,8 +23,8 @@ import faber.objet.photo.dao.DaoPhoto;
  */
 public class PnlListeCategorie extends JPanel {
     protected ArrayList<Categorie> collectionCategorie = new ArrayList<>();
-    protected PnlTagFichier pnlTagFichier;
-    protected PnlListeCategorie pnlListeCategorieDecendant;
+    private PnlTagFichier pnlTagFichier;
+    private PnlListeCategorie pnlListeCategorieDecendant;
     protected int niveau;
 
     public PnlListeCategorie() {
@@ -81,9 +81,9 @@ public class PnlListeCategorie extends JPanel {
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
 class BtnCategorie extends JToggleButton {
-    protected final PnlTagFichier pnlTagFichier;
+    private final PnlTagFichier pnlTagFichier;
     protected final Categorie categorie;
-    protected final PnlListeCategorie     pnlListeCategorie;
+    private final PnlListeCategorie pnlListeCategorie;
     protected final int niveau;
 
     public BtnCategorie(PnlTagFichier pnlTagFichier, Categorie categorie,PnlListeCategorie pnlListeCategorie) {
