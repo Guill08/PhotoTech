@@ -19,14 +19,12 @@ public class Photo {
     private File file;
     private Miniature miniature;
     private final ArrayList<Categorie> collectionMetaDataFile = new ArrayList<Categorie>();
-    private String hash = "";
+    private String hashage = "";
     public Photo(File file) throws IOException, NoSuchAlgorithmException {
         this.file = file;
         this.imageIcon = new ImageIcon(file.getPath());
         this.miniature = new Miniature(this);
-
-
-        this.hash = HashageFile.calculateFileHash(file, "SHA-256");
+        this.hashage = HashageFile.calculateFileHash(file, "SHA-256");
     }
     public String getHashage() {
         return hashage;
@@ -39,9 +37,6 @@ public class Photo {
     public void setHashage(String hashage) {
         this.hashage = hashage;
     }
-
-    private String hashage = "";
-
 
     public ImageIcon getImageIcon() {
         return imageIcon;

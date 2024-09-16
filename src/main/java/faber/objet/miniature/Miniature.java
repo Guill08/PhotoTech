@@ -12,14 +12,15 @@ import java.nio.file.Path;
 
 public class Miniature {
     private final ImageIcon imageRedimensionnee;
-    private final Path  entry;
+    private final Path entry;
     private final Photo photo;
-       public Miniature(Photo photo) throws IOException {
+
+    public Miniature(Photo photo) throws IOException {
         this.entry = photo.getFile().toPath();
-          this.photo = photo;
+        this.photo = photo;
         this.imageRedimensionnee = creerImageMiniature(photo.getImageIcon());
 
-       }
+    }
 
     public Path getEntry() {
         return entry;
@@ -32,7 +33,6 @@ public class Miniature {
 
     private ImageIcon creerImageMiniature(ImageIcon imageIcon) throws IOException {
         String nomFichier = photo.getHashage();
-
 
 
         int maxDim = 150;
