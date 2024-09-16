@@ -160,7 +160,7 @@ class ListenerBtnCategorie implements ActionListener {
 
             if (i >= niveau) {
                 PnlListeCategorie pnlListeCategorie = collectionPnlListeCategorie.get(i);
-                pnlRechercherFichier.remove(pnlListeCategorie);
+                pnlRechercherFichier.getPnlPnlListeCategorie().remove(pnlListeCategorie);
                 pnlRechercherFichier.repaint();
                 pnlRechercherFichier.revalidate();
             }
