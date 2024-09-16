@@ -1,6 +1,7 @@
 package faber.formulaire.pnlListeCategorie;
 
 import faber.formulaire.pnlTagFichier.PnlRechercherFichier;
+import faber.formulaire.pnlTagFichier.PnlTagFichier;
 import faber.objet.categorie.Categorie;
 
 import javax.swing.*;
@@ -10,30 +11,24 @@ import java.util.ArrayList;
 public class PnlListeCategorieRecherche extends PnlListeCategorie {
 
 
-    private final PnlRechercherFichier pnlRechercherFichier;
-
-
-    public PnlListeCategorieRecherche(ArrayList<Categorie> collectionCategorie, PnlRechercherFichier pnlRechercherFichier, int niveau) {
-        this.collectionCategorie = collectionCategorie;
-        this.pnlRechercherFichier = pnlRechercherFichier;
-        this.pnlRechercherFichier.getCollectionPnlListeCategorie().put(niveau, this);
-        this.niveau = niveau;
-        afficherToggleBoutonCategorie();
+    public PnlListeCategorieRecherche(ArrayList<Categorie> collectionCategorie, PnlTagFichier pnlRechercherFichier, int niveau) {
+        super(collectionCategorie, pnlRechercherFichier, niveau);
+        this.pnlTagFichier.getCollectionPnlListeCategorie().put(niveau, this);
     }
 
     @Override
-    protected void afficherToggleBoutonCategorie() {
+    public void afficherToggleBoutonCategorie() {
 
         ButtonGroup bg = new ButtonGroup();
         for (Categorie categorie : collectionCategorie) {
-            BtnCategorieRecherche toggleButton = new BtnCategorieRecherche(this.pnlRechercherFichier, categorie, this);
+            BtnCategorieRecherche toggleButton = new BtnCategorieRecherche(this.pnlTagFichier, categorie, this);
             toggleButton.initialiserListener();
             bg.add(toggleButton);
             add(toggleButton);
         }
-        pnlRechercherFichier.getPnlPnlListeCategorie().add(this, "cell " + String.valueOf(niveau + 1) + " 0");
-        pnlRechercherFichier.repaint();
-        pnlRechercherFichier.revalidate();
+        this.pnlTagFichier.getPnlPnlListeCategorie().add(this, "cell " + String.valueOf(niveau + 1) + " 0");
+        this.pnlTagFichier.repaint();
+        this.pnlTagFichier.revalidate();
 
     }
 
@@ -41,20 +36,16 @@ public class PnlListeCategorieRecherche extends PnlListeCategorie {
 
 class BtnCategorieRecherche extends BtnCategorie {
 
-    private final PnlRechercherFichier pnlRechercherFichier;
-    private final PnlListeCategorieRecherche pnlListeCategorieRecherche;
 
-    public BtnCategorieRecherche(PnlRechercherFichier pnlRechercherFichier, Categorie categorie, PnlListeCategorieRecherche pnlListeCategorie) {
+    public BtnCategorieRecherche(PnlTagFichier pnlRechercherFichier, Categorie categorie, PnlListeCategorie pnlListeCategorie) {
         super(pnlRechercherFichier, categorie, pnlListeCategorie);
-        this.pnlRechercherFichier = pnlRechercherFichier;
-        this.pnlListeCategorieRecherche = pnlListeCategorie;
         definirDimension(categorie);
 
     }
 
     @Override
     protected void initialiserListener() {
-        ListenerBtnCategorieRecherche listenerBtnCategorieRecherche = new ListenerBtnCategorieRecherche(categorie, pnlRechercherFichier, pnlListeCategorieRecherche);
+        ListenerBtnCategorieRecherche listenerBtnCategorieRecherche = new ListenerBtnCategorieRecherche(categorie, (PnlRechercherFichier) pnlTagFichier, (PnlListeCategorieRecherche) pnlListeCategorie);
         this.addActionListener(listenerBtnCategorieRecherche);
     }
 }
@@ -62,20 +53,20 @@ class BtnCategorieRecherche extends BtnCategorie {
 class ListenerBtnCategorieRecherche extends ListenerBtnCategorie {
 
 
-    private final PnlRechercherFichier pnlRechercherFichier;
-
-    public ListenerBtnCategorieRecherche(Categorie categorie, PnlRechercherFichier pnlRechercherFichier, PnlListeCategorieRecherche pnlListeCategorie) {
+    public ListenerBtnCategorieRecherche(Categorie categorie, PnlTagFichier pnlRechercherFichier, PnlListeCategorie pnlListeCategorie) {
         super(categorie, pnlRechercherFichier, pnlListeCategorie);
-        this.pnlRechercherFichier = pnlRechercherFichier;
+
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        ArrayList<Categorie> collectionCategorie = categorie.getCollectionSouSCategories();
-        if (collectionCategorie.size() > 0) {
-            super.supprimerPnlListeCategorieSousJacent(pnlTagFichier, this.niveau + 1);
-            PnlListeCategorieRecherche pnlListeCategorie = new PnlListeCategorieRecherche(collectionCategorie, pnlRechercherFichier, this.niveau + 1);
+        ArrayList<Categorie> collectionSouSCategories = categorie.getCollectionSouSCategories();
+        if (collectionSouSCategories.size() > 0) {
+            super.supprimerPnlListeCategorieSousJacent(super.pnlTagFichier, this.niveau + 1);
+            PnlListeCategorieRecherche pnlListeCategorie = new PnlListeCategorieRecherche(collectionSouSCategories, (PnlRechercherFichier) super.pnlTagFichier, this.niveau + 1);
+            pnlListeCategorie.afficherToggleBoutonCategorie();
         }
+        PnlRechercherFichier pnlRechercherFichier = (PnlRechercherFichier) super.pnlTagFichier;
         pnlRechercherFichier.getCollectionCategorie().add(categorie);
 
     }

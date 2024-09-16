@@ -162,7 +162,7 @@ public class Main {
                 dureeTravailLegaleSemaine = Double.valueOf(parametreApplication.getDureeTravailLegaleSemaine().getValeur());
 */
                 try {
-                    Main.mainFormulaire = new MainFormulaire(new PnlTagFichier(),new PnlRechercherFichier());
+                    Main.mainFormulaire = new MainFormulaire();
                     mainFormulaire.setVisible(true);
                     mainFormulaire.setExtendedState(mainFormulaire.getExtendedState() | mainFormulaire.MAXIMIZED_BOTH);
                     String version = mainFormulaire.getMenuItem2().getText();

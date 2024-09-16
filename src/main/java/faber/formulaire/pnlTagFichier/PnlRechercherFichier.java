@@ -22,6 +22,8 @@ public class PnlRechercherFichier extends PnlTagFichier {
     @Override
     public void createUIComponents() {
         PnlListeCategorieRecherche panel1 = new PnlListeCategorieRecherche(Main.collectionCategorie, this, 0);
+        panel1.afficherToggleBoutonCategorie();
+
     }
 
 }

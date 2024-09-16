@@ -36,7 +36,7 @@ import java.util.logging.Logger;
  */
 public class MainFormulaire extends JFrame {
 
-    private PnlTagFichier pnlTagCategorie;
+    private PnlTagFichier pnlTagFichier;
     private PnlRechercherFichier pnlRechercherFichier;
     private ComboBoxModelGS modelLiaison;
     private ComboBoxModelGS modeleDonnees;
@@ -47,10 +47,10 @@ public class MainFormulaire extends JFrame {
     private JDatePickerImpl datePicker;
 
 
-    public MainFormulaire(PnlTagFichier pnlTagFichier, PnlRechercherFichier pnlRechercherFichier) throws SQLException, ErreurCritereManquant, ErreurValeurIncorrecte, ErreurInterval {
+    public MainFormulaire( ) throws  SQLException, ErreurCritereManquant, ErreurValeurIncorrecte, ErreurInterval {
 
-        this.pnlTagCategorie = pnlTagFichier;
-        this.pnlRechercherFichier = pnlRechercherFichier;
+        this.pnlTagFichier = new PnlTagFichier();
+        this.pnlRechercherFichier = new PnlRechercherFichier();
         initComponents();
 
         URL urlIconeApplication = getClass().getClassLoader().getResource("png/application.png");
@@ -63,10 +63,10 @@ public class MainFormulaire extends JFrame {
             }
         });
         //  initialiseDatePicker();
-        tabbedPane1.add(pnlTagFichier);
-        tabbedPane1.setTitleAt(0, "Catégoriser");
+        //tabbedPane1.add(pnlTagFichier);
+    //    tabbedPane1.setTitleAt(0, "Catégoriser");
         tabbedPane1.add(pnlRechercherFichier);
-        tabbedPane1.setTitleAt(1, "Rechercher");
+        tabbedPane1.setTitleAt(0, "Rechercher");
     }
 
 

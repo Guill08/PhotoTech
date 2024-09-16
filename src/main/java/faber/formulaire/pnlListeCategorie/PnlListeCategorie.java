@@ -23,8 +23,8 @@ import faber.objet.photo.dao.DaoPhoto;
  */
 public class PnlListeCategorie extends JPanel {
     protected ArrayList<Categorie> collectionCategorie = new ArrayList<>();
-    private PnlTagFichier pnlTagFichier;
-    private PnlListeCategorie pnlListeCategorieDecendant;
+    protected PnlTagFichier pnlTagFichier;
+    protected PnlListeCategorie pnlListeCategorieDecendant;
     protected int niveau;
 
     public PnlListeCategorie() {
@@ -37,7 +37,7 @@ public class PnlListeCategorie extends JPanel {
         this.pnlTagFichier.getCollectionPnlListeCategorie().put(niveau, this);
         this.niveau = niveau;
         initComponents();
-        afficherToggleBoutonCategorie();
+
 
     }
 
@@ -84,9 +84,9 @@ public class PnlListeCategorie extends JPanel {
 }
 
 class BtnCategorie extends JToggleButton {
-    private final PnlTagFichier pnlTagFichier;
+    protected final PnlTagFichier pnlTagFichier;
     protected final Categorie categorie;
-    private final PnlListeCategorie pnlListeCategorie;
+    protected final PnlListeCategorie pnlListeCategorie;
     protected final int niveau;
 
     public BtnCategorie(PnlTagFichier pnlTagFichier, Categorie categorie, PnlListeCategorie pnlListeCategorie) {
@@ -138,6 +138,7 @@ class ListenerBtnCategorie implements ActionListener {
             if (collectionCategorie.size() > 0) {
                 supprimerPnlListeCategorieSousJacent(pnlTagFichier, this.niveau + 1);
                 PnlListeCategorie pnlListeCategorie = new PnlListeCategorie(collectionCategorie, pnlTagFichier, this.niveau + 1);
+                pnlListeCategorie.afficherToggleBoutonCategorie();
             }
             for (Photo photo : pnlTagFichier.getCollectionPhoto()) {
                 photo.getCollectionMetaDataFile().add(categorie);
@@ -153,14 +154,15 @@ class ListenerBtnCategorie implements ActionListener {
         }
     }
 
-    protected void supprimerPnlListeCategorieSousJacent(PnlTagFichier pnlTagFichier, int niveau) {
-        HashMap<Integer, PnlListeCategorie> collectionPnlListeCategorie = pnlTagFichier.getCollectionPnlListeCategorie();
+    protected void supprimerPnlListeCategorieSousJacent(PnlTagFichier pnlRechercherFichier, int niveau) {
+        HashMap<Integer, PnlListeCategorie> collectionPnlListeCategorie = pnlRechercherFichier.getCollectionPnlListeCategorie();
         for (int i = 0; i <= collectionPnlListeCategorie.size() - 1; i++) {
+
             if (i >= niveau) {
                 PnlListeCategorie pnlListeCategorie = collectionPnlListeCategorie.get(i);
-                pnlTagFichier.remove(pnlListeCategorie);
-                pnlTagFichier.repaint();
-                pnlTagFichier.revalidate();
+                pnlRechercherFichier.remove(pnlListeCategorie);
+                pnlRechercherFichier.repaint();
+                pnlRechercherFichier.revalidate();
             }
 
 
