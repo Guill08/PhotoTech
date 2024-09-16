@@ -13,9 +13,7 @@ public class PnlListeCategorieRecherche extends PnlListeCategorie {
     private final PnlRechercherFichier pnlRechercherFichier;
 
 
-
     public PnlListeCategorieRecherche(ArrayList<Categorie> collectionCategorie, PnlRechercherFichier pnlRechercherFichier, int niveau) {
-        super();
         this.collectionCategorie = collectionCategorie;
         this.pnlRechercherFichier = pnlRechercherFichier;
         this.pnlRechercherFichier.getCollectionPnlListeCategorie().put(niveau, this);
@@ -76,6 +74,6 @@ class ListenerBtnCategorieRecherche extends ListenerBtnCategorie {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-       pnlRechercherFichier.getCollectionCategorie().add(categorie);
+        pnlRechercherFichier.getCollectionCategorie().add(categorie);
     }
 }

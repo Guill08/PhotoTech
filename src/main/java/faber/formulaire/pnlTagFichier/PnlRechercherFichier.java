@@ -12,7 +12,6 @@ public class PnlRechercherFichier extends PnlTagFichier {
     private ArrayList<Categorie> collectionCategorie = new ArrayList<Categorie>();
 
     public PnlRechercherFichier() {
-        createUIComponents();
 
     }
 

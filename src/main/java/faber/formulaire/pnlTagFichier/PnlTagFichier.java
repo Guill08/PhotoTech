@@ -50,7 +50,6 @@ public class PnlTagFichier extends JPanel {
     public void createUIComponents() {
 
         PnlListeCategorie panel1 = new PnlListeCategorie(Main.collectionCategorie, this, 0);
-        //   add(panel1, "cell 1 0");
         chargerPhoto();
 
         // TODO: add custom component creation code here
