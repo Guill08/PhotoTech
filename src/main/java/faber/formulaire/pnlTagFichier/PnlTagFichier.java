@@ -50,6 +50,8 @@ public class PnlTagFichier extends JPanel {
     public void createUIComponents() {
 
         PnlListeCategorie panel1 = new PnlListeCategorie(Main.collectionCategorie, this, 0);
+        panel1.afficherToggleBoutonCategorie();
+
         chargerPhoto();
 
         // TODO: add custom component creation code here

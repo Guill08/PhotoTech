@@ -63,10 +63,10 @@ public class MainFormulaire extends JFrame {
             }
         });
         //  initialiseDatePicker();
-        //tabbedPane1.add(pnlTagFichier);
-    //    tabbedPane1.setTitleAt(0, "Catégoriser");
+        tabbedPane1.add(pnlTagFichier);
+        tabbedPane1.setTitleAt(0, "Catégoriser");
         tabbedPane1.add(pnlRechercherFichier);
-        tabbedPane1.setTitleAt(0, "Rechercher");
+        tabbedPane1.setTitleAt(1, "Rechercher");
     }
 
 

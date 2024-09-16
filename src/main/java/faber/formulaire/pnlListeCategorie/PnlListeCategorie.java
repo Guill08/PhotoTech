@@ -53,7 +53,7 @@ public class PnlListeCategorie extends JPanel {
         this.pnlListeCategorieDecendant = pnlListeCategorieDecendant;
     }
 
-    protected void afficherToggleBoutonCategorie() {
+    public void afficherToggleBoutonCategorie() {
 
         ButtonGroup bg = new ButtonGroup();
         for (Categorie categorie : collectionCategorie) {
