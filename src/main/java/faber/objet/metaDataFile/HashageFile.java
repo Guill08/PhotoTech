@@ -2,6 +2,7 @@ package faber.objet.metaDataFile;
 
 import faber.main.Main;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,9 +13,9 @@ import java.security.NoSuchAlgorithmException;
 
 public class HashageFile {
 
-    public static String calculateFileHash(String filePath, String algorithm)
+    public static String calculateFileHash(File file, String algorithm)
             throws NoSuchAlgorithmException, IOException {
-        Path path = Paths.get(filePath);
+        Path path = Paths.get(file.getPath());
         MessageDigest digest = MessageDigest.getInstance(algorithm);
 
         try (InputStream fis = new FileInputStream(path.toFile())) {

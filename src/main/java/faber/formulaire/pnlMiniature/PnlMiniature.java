@@ -55,13 +55,7 @@ public class PnlMiniature extends JPanel {
         public void actionPerformed(java.awt.event.ActionEvent e) {
             if (btnMiniature.isSelected()) {
                 PnlMiniature.this.pnlTagFichier.getCollectionPhoto().add(photo);
-                try {
-                    photo.setHashage(HashageFile.calculateFileHash(photo.getFile().getPath(),"SHA-256"));
-                } catch (NoSuchAlgorithmException ex) {
-                    throw new RuntimeException(ex);
-                } catch (IOException ex) {
-                    throw new RuntimeException(ex);
-                }
+
             } else {
                 PnlMiniature.this.pnlTagFichier.getCollectionPhoto().remove(photo);
             }

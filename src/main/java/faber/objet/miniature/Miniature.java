@@ -16,8 +16,9 @@ public class Miniature {
     private final Photo photo;
        public Miniature(Photo photo) throws IOException {
         this.entry = photo.getFile().toPath();
+          this.photo = photo;
         this.imageRedimensionnee = creerImageMiniature(photo.getImageIcon());
-        this.photo = photo;
+
        }
 
     public Path getEntry() {
@@ -32,9 +33,8 @@ public class Miniature {
     private ImageIcon creerImageMiniature(ImageIcon imageIcon) throws IOException {
         String nomFichier = photo.getHashage();
 
-        String outputImagePath = "data/mini/" + entry.getFileName().toString();
-        int scaledWidth = 150;
-        int scaledHeight = 150;
+
+
         int maxDim = 150;
         int i = 0;
         File inputFile = new File(entry.toAbsolutePath().toString());
@@ -59,11 +59,7 @@ public class Miniature {
         g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
         g2d.drawImage(inputImage, 0, 0, newWidth, newHeight, null);
         g2d.dispose();
-        // Extraire l'extension du fichier à partir du chemin de sortie
-        String formatName = outputImagePath.substring(outputImagePath.lastIndexOf(".") + 1);
 
-        // Écrire l'image redimensionnée dans le fichier de sortie
-        ImageIO.write(outputImage, formatName, new File(outputImagePath));
-        return new ImageIcon("data/mini/" + entry.getFileName().toString());
+        return new ImageIcon(outputImage);
     }
 }

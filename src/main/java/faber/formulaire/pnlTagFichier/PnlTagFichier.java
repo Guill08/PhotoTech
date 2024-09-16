@@ -19,6 +19,7 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -28,6 +29,7 @@ import java.util.HashMap;
 public class PnlTagFichier extends JPanel {
     private HashMap<Integer, PnlListeCategorie> collectionPnlListeCategorie = new HashMap<Integer, PnlListeCategorie>();
     private ArrayList<Photo> collectionPhoto = new ArrayList<Photo>();
+
     public PnlTagFichier() {
         initComponents();
         createUIComponents();
@@ -72,11 +74,13 @@ public class PnlTagFichier extends JPanel {
             for (Path entry : stream) {
                 Photo photo = new Photo(new File(entry.toUri()));
 
-                pnlListePhoto.add(new PnlMiniature(new BorderLayout(), photo,this));
+                pnlListePhoto.add(new PnlMiniature(new BorderLayout(), photo, this));
                 pnlListePhoto.add(Box.createRigidArea(new Dimension(60, 0)));
             }
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
         }
     }
 
