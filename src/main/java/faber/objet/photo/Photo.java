@@ -21,10 +21,12 @@ public class Photo {
     private final ArrayList<Categorie> collectionMetaDataFile = new ArrayList<Categorie>();
     private String hashage = "";
     public Photo(File file) throws IOException, NoSuchAlgorithmException {
+        this.hashage = HashageFile.calculateFileHash(file, "SHA-256");
         this.file = file;
         this.imageIcon = new ImageIcon(file.getPath());
         this.miniature = new Miniature(this);
-        this.hashage = HashageFile.calculateFileHash(file, "SHA-256");
+
+
     }
     public String getHashage() {
         return hashage;

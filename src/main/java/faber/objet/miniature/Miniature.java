@@ -32,7 +32,7 @@ public class Miniature {
 
 
     private ImageIcon creerImageMiniature(ImageIcon imageIcon) throws IOException {
-        String nomFichier = photo.getHashage();
+        String nomFichier = this.entry.getFileName().toString();
 
 
         int maxDim = 150;
@@ -60,6 +60,9 @@ public class Miniature {
         g2d.drawImage(inputImage, 0, 0, newWidth, newHeight, null);
         g2d.dispose();
 
+        String formatName = nomFichier.substring(nomFichier.lastIndexOf(".") + 1);
+        ImageIO.write(outputImage, formatName, new File("data/mini/" +photo.getHashage()));
+       // return new ImageIcon("\\mini\\" + entry.getFileName().toString());
         return new ImageIcon(outputImage);
     }
 }

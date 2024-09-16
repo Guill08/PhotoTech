@@ -144,7 +144,7 @@ class ListenerBtnCategorie implements ActionListener {
                 photo.getCollectionMetaDataFile().add(categorie);
                 try {
                     DaoPhoto.insertCategorie(Main.getConnectionSqlLite(), photo, categorie);
-                    DaoPhoto.insert(Main.getConnectionSqlLite(), photo);
+
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 }

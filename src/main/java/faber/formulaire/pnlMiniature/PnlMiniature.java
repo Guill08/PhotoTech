@@ -1,14 +1,17 @@
 package faber.formulaire.pnlMiniature;
 
 import faber.formulaire.pnlTagFichier.PnlTagFichier;
+import faber.main.Main;
 import faber.objet.metaDataFile.HashageFile;
 import faber.objet.miniature.Miniature;
 import faber.objet.photo.Photo;
+import faber.objet.photo.dao.DaoPhoto;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import java.sql.SQLException;
 
 public class PnlMiniature extends JPanel {
 
@@ -55,7 +58,11 @@ public class PnlMiniature extends JPanel {
         public void actionPerformed(java.awt.event.ActionEvent e) {
             if (btnMiniature.isSelected()) {
                 PnlMiniature.this.pnlTagFichier.getCollectionPhoto().add(photo);
-
+                try {
+                    DaoPhoto.insert(Main.getConnectionSqlLite(),photo);
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
             } else {
                 PnlMiniature.this.pnlTagFichier.getCollectionPhoto().remove(photo);
             }
