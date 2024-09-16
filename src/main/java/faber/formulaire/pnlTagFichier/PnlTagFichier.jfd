@@ -10,7 +10,7 @@ new FormModel {
 				"$columnConstraints": "[fill]"
 				"$rowConstraints": "[]"
 			} ) {
-				name: "pnlPnlListeCategorie"
+				name: "pnlListeCategorie"
 			}, new FormLayoutConstraints( class java.lang.String ) {
 				"value": "First"
 			} )

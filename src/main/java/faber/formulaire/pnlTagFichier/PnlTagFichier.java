@@ -44,7 +44,7 @@ public class PnlTagFichier extends JPanel {
     }
 
     public JPanel getPnlPnlListeCategorie() {
-        return pnlPnlListeCategorie;
+        return pnlListeCategorie;
     }
 
     public void createUIComponents() {
@@ -90,23 +90,23 @@ public class PnlTagFichier extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-        pnlPnlListeCategorie = new JPanel();
+        pnlListeCategorie = new JPanel();
         scrollPane1 = new JScrollPane();
         pnlListePhoto = new JPanel();
 
         //======== this ========
         setLayout(new BorderLayout());
 
-        //======== pnlPnlListeCategorie ========
+        //======== pnlListeCategorie ========
         {
-            pnlPnlListeCategorie.setLayout(new MigLayout(
+            pnlListeCategorie.setLayout(new MigLayout(
                 "hidemode 3",
                 // columns
                 "[fill]",
                 // rows
                 "[]"));
         }
-        add(pnlPnlListeCategorie, BorderLayout.PAGE_START);
+        add(pnlListeCategorie, BorderLayout.PAGE_START);
 
         //======== scrollPane1 ========
         {
@@ -127,7 +127,7 @@ public class PnlTagFichier extends JPanel {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    private JPanel pnlPnlListeCategorie;
+    private JPanel pnlListeCategorie;
     private JScrollPane scrollPane1;
     private JPanel pnlListePhoto;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
