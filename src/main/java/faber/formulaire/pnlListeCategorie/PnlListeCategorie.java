@@ -37,14 +37,8 @@ public class PnlListeCategorie extends JPanel {
         this.pnlTagFichier.getCollectionPnlListeCategorie().put(niveau, this);
         this.niveau = niveau;
         initComponents();
-        ButtonGroup bg = new ButtonGroup();
-        for (Categorie categorie : collectionCategorie) {
+        afficherToggleBoutonCategorie();
 
-            afficherToggleBoutonCategorie(categorie, niveau, bg);
-        }
-        pnlTagFichier.getPnlPnlListeCategorie().add(this, "cell " + String.valueOf(niveau + 1) + " 0");
-        pnlTagFichier.repaint();
-        pnlTagFichier.revalidate();
     }
 
     public int getNiveau() {
@@ -59,12 +53,20 @@ public class PnlListeCategorie extends JPanel {
         this.pnlListeCategorieDecendant = pnlListeCategorieDecendant;
     }
 
-    protected void afficherToggleBoutonCategorie(Categorie categorie, int niveau, ButtonGroup bg) {
+    protected void afficherToggleBoutonCategorie() {
 
+        ButtonGroup bg = new ButtonGroup();
+        for (Categorie categorie : collectionCategorie) {
+            BtnCategorie toggleButton = new BtnCategorie(pnlTagFichier, categorie, this);
+            toggleButton.initialiserListener();
+            bg.add(toggleButton);
+            add(toggleButton);
 
-        BtnCategorie toggleButton = new BtnCategorie(pnlTagFichier, categorie, this);
-        bg.add(toggleButton);
-        add(toggleButton);
+        }
+        pnlTagFichier.getPnlPnlListeCategorie().add(this, "cell " + String.valueOf(niveau + 1) + " 0");
+        pnlTagFichier.repaint();
+        pnlTagFichier.revalidate();
+
 
     }
 
@@ -92,11 +94,15 @@ class BtnCategorie extends JToggleButton {
         this.categorie = categorie;
         this.pnlListeCategorie = pnlListeCategorie;
         this.niveau = pnlListeCategorie.getNiveau();
+        definirDimension(categorie);
+
+    }
+
+    protected void definirDimension(Categorie categorie) {
         this.setMinimumSize(new Dimension(150, 30));
         this.setMaximumSize(new Dimension(150, 30));
         this.setPreferredSize(new Dimension(150, 30));
         this.setText(categorie.getLibelle());
-        initialiserListener();
     }
 
     protected void initialiserListener() {

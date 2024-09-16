@@ -1,7 +1,6 @@
 package faber.formulaire.pnlListeCategorie;
 
 import faber.formulaire.pnlTagFichier.PnlRechercherFichier;
-import faber.formulaire.pnlTagFichier.PnlTagFichier;
 import faber.objet.categorie.Categorie;
 
 import javax.swing.*;
@@ -13,22 +12,34 @@ public class PnlListeCategorieRecherche extends PnlListeCategorie {
 
     private final PnlRechercherFichier pnlRechercherFichier;
 
-    public PnlListeCategorieRecherche(PnlRechercherFichier pnlRechercherFichier) {
 
-        this.pnlRechercherFichier = pnlRechercherFichier;
-    }
 
     public PnlListeCategorieRecherche(ArrayList<Categorie> collectionCategorie, PnlRechercherFichier pnlRechercherFichier, int niveau) {
-        super(collectionCategorie, pnlRechercherFichier, niveau);
+        super();
+        this.collectionCategorie = collectionCategorie;
         this.pnlRechercherFichier = pnlRechercherFichier;
+        this.pnlRechercherFichier.getCollectionPnlListeCategorie().put(niveau, this);
+        this.niveau = niveau;
+
+        // supeafficherToggleBoutonCategorier(collectionCategorie, pnlRechercherFichier, niveau);
+        afficherToggleBoutonCategorie();
 
     }
 
     @Override
-    protected void afficherToggleBoutonCategorie(Categorie categorie, int niveau, ButtonGroup bg) {
-        BtnCategorieRecherche toggleButton = new BtnCategorieRecherche(this.pnlRechercherFichier, categorie, this);
-        bg.add(toggleButton);
-        add(toggleButton);
+    protected void afficherToggleBoutonCategorie() {
+
+        ButtonGroup bg = new ButtonGroup();
+        for (Categorie categorie : collectionCategorie) {
+            BtnCategorieRecherche toggleButton = new BtnCategorieRecherche(this.pnlRechercherFichier, categorie, this);
+            toggleButton.initialiserListener();
+            bg.add(toggleButton);
+            add(toggleButton);
+        }
+        pnlRechercherFichier.getPnlPnlListeCategorie().add(this, "cell " + String.valueOf(niveau + 1) + " 0");
+        pnlRechercherFichier.repaint();
+        pnlRechercherFichier.revalidate();
+
     }
 
 }
@@ -42,6 +53,8 @@ class BtnCategorieRecherche extends BtnCategorie {
         super(pnlRechercherFichier, categorie, pnlListeCategorie);
         this.pnlRechercherFichier = pnlRechercherFichier;
         this.pnlListeCategorieRecherche = pnlListeCategorie;
+        definirDimension(categorie);
+
     }
 
     @Override

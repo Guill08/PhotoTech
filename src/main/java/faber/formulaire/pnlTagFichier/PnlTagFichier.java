@@ -72,10 +72,15 @@ public class PnlTagFichier extends JPanel {
         // Try-with-resources to ensure the DirectoryStream is closed
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(path)) {
             for (Path entry : stream) {
-                Photo photo = new Photo(new File(entry.toUri()));
+                File file = entry.toFile();
+                if(!file.isDirectory()) {
 
-                pnlListePhoto.add(new PnlMiniature(new BorderLayout(), photo, this));
-                pnlListePhoto.add(Box.createRigidArea(new Dimension(60, 0)));
+                    Photo photo = new Photo(file);
+                    pnlListePhoto.add(new PnlMiniature(new BorderLayout(), photo, this));
+                    pnlListePhoto.add(Box.createRigidArea(new Dimension(60, 0)));
+                }
+
+
             }
         } catch (IOException e) {
             e.printStackTrace();

@@ -8,10 +8,12 @@ import faber.objet.categorie.Categorie;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class PnlRechercherFichier extends PnlTagFichier{
+public class PnlRechercherFichier extends PnlTagFichier {
     private ArrayList<Categorie> collectionCategorie = new ArrayList<Categorie>();
 
     public PnlRechercherFichier() {
+        createUIComponents();
+
     }
 
     public ArrayList<Categorie> getCollectionCategorie() {
