@@ -82,13 +82,14 @@ public class PnlListeCategorie extends JPanel {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
+
 class BtnCategorie extends JToggleButton {
     private final PnlTagFichier pnlTagFichier;
     protected final Categorie categorie;
     private final PnlListeCategorie pnlListeCategorie;
     protected final int niveau;
 
-    public BtnCategorie(PnlTagFichier pnlTagFichier, Categorie categorie,PnlListeCategorie pnlListeCategorie) {
+    public BtnCategorie(PnlTagFichier pnlTagFichier, Categorie categorie, PnlListeCategorie pnlListeCategorie) {
         super();
         this.pnlTagFichier = pnlTagFichier;
         this.categorie = categorie;
@@ -106,18 +107,22 @@ class BtnCategorie extends JToggleButton {
     }
 
     protected void initialiserListener() {
-        this.addActionListener(new ListenerBtnCategorie(categorie,pnlTagFichier,pnlListeCategorie));
+        this.addActionListener(new ListenerBtnCategorie(categorie, pnlTagFichier, pnlListeCategorie));
 
     }
 
 
 }
+
 class ListenerBtnCategorie implements ActionListener {
 
-    protected final Categorie categorie;
-    protected final PnlTagFichier pnlTagFichier;
-    protected final PnlListeCategorie pnlListeCategorie;
-    protected final int niveau;
+    protected Categorie categorie = null;
+    protected PnlTagFichier pnlTagFichier = null;
+    protected PnlListeCategorie pnlListeCategorie = null;
+    protected int niveau = 0;
+
+    public ListenerBtnCategorie() {
+    }
 
     public ListenerBtnCategorie(Categorie categorie, PnlTagFichier pnlTagFichier, PnlListeCategorie pnlListeCategorie) {
         this.categorie = categorie;
@@ -130,25 +135,25 @@ class ListenerBtnCategorie implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (pnlTagFichier.getCollectionPhoto().size() > 0) {
             ArrayList<Categorie> collectionCategorie = categorie.getCollectionSouSCategories();
-              if (collectionCategorie.size() > 0) {
+            if (collectionCategorie.size() > 0) {
                 supprimerPnlListeCategorieSousJacent(pnlTagFichier, this.niveau + 1);
                 PnlListeCategorie pnlListeCategorie = new PnlListeCategorie(collectionCategorie, pnlTagFichier, this.niveau + 1);
             }
             for (Photo photo : pnlTagFichier.getCollectionPhoto()) {
                 photo.getCollectionMetaDataFile().add(categorie);
                 try {
-                    DaoPhoto.insertCategorie(Main.getConnectionSqlLite(),photo,categorie);
-                    DaoPhoto.insert(Main.getConnectionSqlLite(),photo);
+                    DaoPhoto.insertCategorie(Main.getConnectionSqlLite(), photo, categorie);
+                    DaoPhoto.insert(Main.getConnectionSqlLite(), photo);
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 }
             }
-
         } else {
             JOptionPane.showMessageDialog(this.pnlTagFichier, "Merci de saisir un photo !", "Aucune saisie", JOptionPane.WARNING_MESSAGE);
         }
     }
-    private void supprimerPnlListeCategorieSousJacent(PnlTagFichier pnlTagFichier, int niveau) {
+
+    protected void supprimerPnlListeCategorieSousJacent(PnlTagFichier pnlTagFichier, int niveau) {
         HashMap<Integer, PnlListeCategorie> collectionPnlListeCategorie = pnlTagFichier.getCollectionPnlListeCategorie();
         for (int i = 0; i <= collectionPnlListeCategorie.size() - 1; i++) {
             if (i >= niveau) {

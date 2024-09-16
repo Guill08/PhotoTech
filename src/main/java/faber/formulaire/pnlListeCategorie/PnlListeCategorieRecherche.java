@@ -18,10 +18,7 @@ public class PnlListeCategorieRecherche extends PnlListeCategorie {
         this.pnlRechercherFichier = pnlRechercherFichier;
         this.pnlRechercherFichier.getCollectionPnlListeCategorie().put(niveau, this);
         this.niveau = niveau;
-
-        // supeafficherToggleBoutonCategorier(collectionCategorie, pnlRechercherFichier, niveau);
         afficherToggleBoutonCategorie();
-
     }
 
     @Override
@@ -74,6 +71,12 @@ class ListenerBtnCategorieRecherche extends ListenerBtnCategorie {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        ArrayList<Categorie> collectionCategorie = categorie.getCollectionSouSCategories();
+        if (collectionCategorie.size() > 0) {
+            super.supprimerPnlListeCategorieSousJacent(pnlTagFichier, this.niveau + 1);
+            PnlListeCategorieRecherche pnlListeCategorie = new PnlListeCategorieRecherche(collectionCategorie, pnlRechercherFichier, this.niveau + 1);
+        }
         pnlRechercherFichier.getCollectionCategorie().add(categorie);
+
     }
 }
