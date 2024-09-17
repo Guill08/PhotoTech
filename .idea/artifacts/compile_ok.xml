@@ -1,8 +1,7 @@
 <component name="ArtifactManager">
-  <artifact build-on-make="true" name="compile">
-    <output-path>$PROJECT_DIR$/out/artifacts/compile</output-path>
+  <artifact build-on-make="true" name="compile_ok">
+    <output-path>$PROJECT_DIR$/out/artifacts/compile_ok</output-path>
     <root id="root">
-      <element id="artifact" artifact-name="DeclarationOF3:jar" />
       <element id="directory" name="conf">
         <element id="dir-copy" path="$PROJECT_DIR$/conf" />
       </element>
@@ -12,6 +11,11 @@
       <element id="directory" name="update">
         <element id="dir-copy" path="$PROJECT_DIR$/update" />
       </element>
+      <element id="file-copy" path="$PROJECT_DIR$/my.db" />
+      <element id="directory" name="data">
+        <element id="dir-copy" path="$PROJECT_DIR$/data" />
+      </element>
+      <element id="artifact" artifact-name="photoTechFaber:jar" />
     </root>
   </artifact>
 </component>

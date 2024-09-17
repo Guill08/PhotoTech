@@ -38,10 +38,9 @@
     <orderEntry type="library" exported="" name="commons.beanutils" level="project" />
     <orderEntry type="library" exported="" name="commons.io" level="project" />
     <orderEntry type="library" exported="" name="de.siegmar.fastcsv" level="project" />
-    <orderEntry type="library" name="formdev.flatlaf" level="project" />
-    <orderEntry type="library" name="apache.commons.lang3" level="project" />
-    <orderEntry type="library" name="commons-lang3-3.17.0" level="project" />
-    <orderEntry type="library" name="xerial.sqlite.jdbc" level="project" />
-    <orderEntry type="library" name="slf4j.nop" level="project" />
+    <orderEntry type="library" exported="" name="formdev.flatlaf" level="project" />
+    <orderEntry type="library" exported="" name="commons-lang3-3.17.0" level="project" />
+    <orderEntry type="library" exported="" name="xerial.sqlite.jdbc" level="project" />
+    <orderEntry type="library" exported="" name="slf4j.nop" level="project" />
   </component>
 </module>
