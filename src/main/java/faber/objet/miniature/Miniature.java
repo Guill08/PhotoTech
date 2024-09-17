@@ -12,14 +12,19 @@ import java.nio.file.Path;
 
 public class Miniature {
     private final ImageIcon imageRedimensionnee;
-    private final Path entry;
-    private final Photo photo;
+    private  Path entry;
+    private  Photo photo;
 
     public Miniature(Photo photo) throws IOException {
         this.entry = photo.getFile().toPath();
         this.photo = photo;
         this.imageRedimensionnee = creerImageMiniature(photo.getImageIcon());
 
+    }
+
+    public Miniature(ImageIcon imageRedimensionnee, Photo photo) {
+        this.imageRedimensionnee = imageRedimensionnee;
+        this.photo = photo;
     }
 
     public Path getEntry() {

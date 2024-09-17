@@ -32,7 +32,7 @@ import java.util.HashMap;
  */
 public class PnlTagFichier extends JPanel {
     private HashMap<Integer, PnlListeCategorie> collectionPnlListeCategorie = new HashMap<Integer, PnlListeCategorie>();
-    private ArrayList<Photo> collectionPhoto = new ArrayList<Photo>();
+    protected ArrayList<Photo> collectionPhoto = new ArrayList<Photo>();
     private ArrayList<Categorie> collectionCategorieSelectionnees = new ArrayList<Categorie>();
 
     public PnlTagFichier() {
@@ -71,21 +71,10 @@ public class PnlTagFichier extends JPanel {
         // TODO: add custom component creation code here
     }
 
-    private void chargerPhoto() {
+    protected void chargerPhoto() {
         Path path = Paths.get("data");
         /**/
-        Component component = Box.createRigidArea(new Dimension(60, 0));
-
-/*        pnlListePhoto.add(Box.createRigidArea(new Dimension(60,0)));
-        JLabel label2 = new JLabel("test2");
-        pnlListePhoto.add(label2);
-        pnlListePhoto.add(Box.createRigidArea(new Dimension(60,0)));
-        JLabel label3 = new JLabel("test3");
-        pnlListePhoto.add(label3);*/
-        int maxDim = 150;
-        int i = 0;
-        // Try-with-resources to ensure the DirectoryStream is closed
-        try (DirectoryStream<Path> stream = Files.newDirectoryStream(path)) {
+          try (DirectoryStream<Path> stream = Files.newDirectoryStream(path)) {
             for (Path entry : stream) {
                 File file = entry.toFile();
                 if (!file.isDirectory()) {
@@ -104,7 +93,9 @@ public class PnlTagFichier extends JPanel {
         }
     }
 
-    private void button1(ActionEvent e) {
+
+
+    protected void button1(ActionEvent e) {
         for (Photo photo : collectionPhoto) {
             try {
                 DaoPhoto.insert(Main.getConnectionSqlLite(),photo);
@@ -168,7 +159,7 @@ public class PnlTagFichier extends JPanel {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JPanel pnlListeCategorie;
     private JScrollPane scrollPane1;
-    private JPanel pnlListePhoto;
+    protected JPanel pnlListePhoto;
     private JButton btnValiderTag;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
