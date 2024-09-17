@@ -10,6 +10,7 @@ import javax.swing.*;
 import faber.formulaire.pnlMiniature.PnlMiniature;
 import faber.formulaire.pnlListeCategorie.*;
 import faber.main.Main;
+import faber.objet.categorie.Categorie;
 import faber.objet.photo.Photo;
 import net.miginfocom.swing.*;
 
@@ -29,10 +30,15 @@ import java.util.HashMap;
 public class PnlTagFichier extends JPanel {
     private HashMap<Integer, PnlListeCategorie> collectionPnlListeCategorie = new HashMap<Integer, PnlListeCategorie>();
     private ArrayList<Photo> collectionPhoto = new ArrayList<Photo>();
+    private ArrayList<Categorie> collectionCategorieSelectionnees = new ArrayList<Categorie>();
 
     public PnlTagFichier() {
         initComponents();
         createUIComponents();
+    }
+
+    public ArrayList<Categorie> getCollectionCategorieSelectionnees() {
+        return collectionCategorieSelectionnees;
     }
 
     public ArrayList<Photo> getCollectionPhoto() {
@@ -95,6 +101,7 @@ public class PnlTagFichier extends JPanel {
         pnlListeCategorie = new JPanel();
         scrollPane1 = new JScrollPane();
         pnlListePhoto = new JPanel();
+        button1 = new JButton();
 
         //======== this ========
         setLayout(new BorderLayout());
@@ -125,6 +132,10 @@ public class PnlTagFichier extends JPanel {
             scrollPane1.setViewportView(pnlListePhoto);
         }
         add(scrollPane1, BorderLayout.CENTER);
+
+        //---- button1 ----
+        button1.setText("Appliquer");
+        add(button1, BorderLayout.PAGE_END);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
 
@@ -132,5 +143,6 @@ public class PnlTagFichier extends JPanel {
     private JPanel pnlListeCategorie;
     private JScrollPane scrollPane1;
     private JPanel pnlListePhoto;
+    private JButton button1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

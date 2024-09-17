@@ -140,6 +140,10 @@ class ListenerBtnCategorie implements ActionListener {
                 PnlListeCategorie pnlListeCategorie = new PnlListeCategorie(collectionCategorie, pnlTagFichier, this.niveau + 1);
                 pnlListeCategorie.afficherToggleBoutonCategorie();
             }
+
+            pnlTagFichier.getCollectionCategorieSelectionnees().add(categorie);
+/*
+            }
             for (Photo photo : pnlTagFichier.getCollectionPhoto()) {
                 photo.getCollectionMetaDataFile().add(categorie);
                 try {
@@ -148,8 +152,8 @@ class ListenerBtnCategorie implements ActionListener {
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 }
-            }
-        } else {
+                */
+    } else {
             JOptionPane.showMessageDialog(this.pnlTagFichier, "Merci de saisir un photo !", "Aucune saisie", JOptionPane.WARNING_MESSAGE);
         }
     }
