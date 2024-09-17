@@ -38,7 +38,7 @@ public class DaoPhoto {
 
         String requete = "SELECT photo.id,photo.libelle FROM photo " +
                 "INNER JOIN photo_categorie ON photo.id = photo_categorie.id_photo " +
-                "WHERE photo_categorie.id_categorie IN " + where;
+                "WHERE photo_categorie.id_categorie IN " + where + " GROUP BY 1,2";
         PreparedStatement preparedStatement = null;
         preparedStatement = connection.prepareStatement(requete);
         ResultSet resultSet = preparedStatement.executeQuery();
@@ -46,7 +46,7 @@ public class DaoPhoto {
             Photo photo = new Photo();
             photo.setHashage(resultSet.getString("id"));
             photo.setLibelle(resultSet.getString("libelle"));
-            File file = new File("mini/" + photo.getHashage());
+            File file = new File("data/mini/" + photo.getHashage());
             Miniature miniature = new Miniature(new ImageIcon(file.getPath()), photo);
             photo.setMiniature(miniature);
             collectionPhoto.add(photo);
