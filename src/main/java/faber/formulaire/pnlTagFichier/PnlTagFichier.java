@@ -5,6 +5,7 @@
 package faber.formulaire.pnlTagFichier;
 
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 
 import faber.formulaire.pnlMiniature.PnlMiniature;
@@ -12,6 +13,7 @@ import faber.formulaire.pnlListeCategorie.*;
 import faber.main.Main;
 import faber.objet.categorie.Categorie;
 import faber.objet.photo.Photo;
+import faber.objet.photo.dao.DaoPhoto;
 import net.miginfocom.swing.*;
 
 import java.io.File;
@@ -21,6 +23,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -80,7 +83,7 @@ public class PnlTagFichier extends JPanel {
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(path)) {
             for (Path entry : stream) {
                 File file = entry.toFile();
-                if(!file.isDirectory()) {
+                if (!file.isDirectory()) {
 
                     Photo photo = new Photo(file);
                     pnlListePhoto.add(new PnlMiniature(new BorderLayout(), photo, this));
@@ -93,6 +96,22 @@ public class PnlTagFichier extends JPanel {
             e.printStackTrace();
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    private void button1(ActionEvent e) {
+        for (Photo photo : collectionPhoto) {
+            try {
+                DaoPhoto.insert(Main.getConnectionSqlLite(),photo);
+                for (Categorie categorie : collectionCategorieSelectionnees) {
+                    DaoPhoto.insertCategorie(Main.getConnectionSqlLite(),photo,categorie);
+
+                }
+            } catch (SQLException ex) {
+                throw new RuntimeException(ex);
+            }
+
+
         }
     }
 
@@ -135,6 +154,7 @@ public class PnlTagFichier extends JPanel {
 
         //---- button1 ----
         button1.setText("Appliquer");
+        button1.addActionListener(e -> button1(e));
         add(button1, BorderLayout.PAGE_END);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
