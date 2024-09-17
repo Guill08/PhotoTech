@@ -37,7 +37,14 @@ public class PnlTagFichier extends JPanel {
 
     public PnlTagFichier() {
         initComponents();
-        createUIComponents();
+        initialiserPnlCategorie();
+    }
+
+    protected void initialiserPnlCategorie() {
+        PnlListeCategorie panel1 = new PnlListeCategorie(Main.collectionCategorie, this, 0);
+        panel1.afficherToggleBoutonCategorie();
+
+        chargerPhoto();
     }
 
     public ArrayList<Categorie> getCollectionCategorieSelectionnees() {
@@ -57,11 +64,9 @@ public class PnlTagFichier extends JPanel {
     }
 
     public void createUIComponents() {
+        btnValiderTag = new JButton();
+        btnValiderTag.setText("Valider");
 
-        PnlListeCategorie panel1 = new PnlListeCategorie(Main.collectionCategorie, this, 0);
-        panel1.afficherToggleBoutonCategorie();
-
-        chargerPhoto();
 
         // TODO: add custom component creation code here
     }
@@ -117,10 +122,11 @@ public class PnlTagFichier extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
+        createUIComponents();
+
         pnlListeCategorie = new JPanel();
         scrollPane1 = new JScrollPane();
         pnlListePhoto = new JPanel();
-        button1 = new JButton();
 
         //======== this ========
         setLayout(new BorderLayout());
@@ -152,10 +158,10 @@ public class PnlTagFichier extends JPanel {
         }
         add(scrollPane1, BorderLayout.CENTER);
 
-        //---- button1 ----
-        button1.setText("Appliquer");
-        button1.addActionListener(e -> button1(e));
-        add(button1, BorderLayout.PAGE_END);
+        //---- btnValiderTag ----
+        btnValiderTag.setText("Appliquer");
+        btnValiderTag.addActionListener(e -> button1(e));
+        add(btnValiderTag, BorderLayout.PAGE_END);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
 
@@ -163,6 +169,6 @@ public class PnlTagFichier extends JPanel {
     private JPanel pnlListeCategorie;
     private JScrollPane scrollPane1;
     private JPanel pnlListePhoto;
-    private JButton button1;
+    private JButton btnValiderTag;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

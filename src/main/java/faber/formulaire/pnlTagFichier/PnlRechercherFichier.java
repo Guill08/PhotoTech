@@ -15,15 +15,16 @@ public class PnlRechercherFichier extends PnlTagFichier {
 
     }
 
+    @Override
+    protected void initialiserPnlCategorie() {
+        PnlListeCategorieRecherche panel1 = new PnlListeCategorieRecherche(Main.collectionCategorie, this, 0);
+        panel1.afficherToggleBoutonCategorie();
+    }
+
     public ArrayList<Categorie> getCollectionCategorie() {
         return collectionCategorie;
     }
 
-    @Override
-    public void createUIComponents() {
-        PnlListeCategorieRecherche panel1 = new PnlListeCategorieRecherche(Main.collectionCategorie, this, 0);
-        panel1.afficherToggleBoutonCategorie();
 
-    }
 
 }
