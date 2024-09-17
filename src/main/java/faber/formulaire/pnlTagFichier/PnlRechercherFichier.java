@@ -17,6 +17,7 @@ import java.util.Calendar;
 
 public class PnlRechercherFichier extends PnlTagFichier {
     private ArrayList<Categorie> collectionCategorie = new ArrayList<Categorie>();
+    private Categorie categorieSelectionnee;
     public PnlRechercherFichier() {
 
     }
@@ -25,6 +26,14 @@ public class PnlRechercherFichier extends PnlTagFichier {
     protected void initialiserPnlCategorie() {
         PnlListeCategorieRecherche panel1 = new PnlListeCategorieRecherche(Main.collectionCategorie, this, 0);
         panel1.afficherToggleBoutonCategorie();
+    }
+
+    public Categorie getCategorieSelectionnee() {
+        return categorieSelectionnee;
+    }
+
+    public void setCategorieSelectionnee(Categorie categorieSelectionnee) {
+        this.categorieSelectionnee = categorieSelectionnee;
     }
 
     public ArrayList<Categorie> getCollectionCategorie() {
@@ -39,7 +48,12 @@ public class PnlRechercherFichier extends PnlTagFichier {
     @Override
     protected void chargerPhoto() {
         try {
-            DaoPhoto.select(Main.getConnectionSqlLite(), collectionCategorie,this.collectionPhoto);
+            pnlListePhoto.removeAll();
+            pnlListePhoto.revalidate();
+            pnlListePhoto.repaint();
+            collectionPhoto.clear();
+
+            DaoPhoto.select(Main.getConnectionSqlLite(), collectionCategorie,this.collectionPhoto, categorieSelectionnee);
             for (Photo photo : collectionPhoto) {
                 pnlListePhoto.add(new PnlMiniature(new BorderLayout(), photo, this));
                 pnlListePhoto.add(Box.createRigidArea(new Dimension(60, 0)));

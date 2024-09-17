@@ -68,6 +68,7 @@ class ListenerBtnCategorieRecherche extends ListenerBtnCategorie {
         }
         PnlRechercherFichier pnlRechercherFichier = (PnlRechercherFichier) super.pnlTagFichier;
         pnlRechercherFichier.getCollectionCategorie().add(categorie);
+        pnlRechercherFichier.setCategorieSelectionnee(categorie);
 
     }
 }

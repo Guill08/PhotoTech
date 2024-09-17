@@ -33,12 +33,12 @@ public class DaoPhoto {
 
     }
 
-    public static void select(Connection connection, ArrayList<Categorie> collectionCategorie, ArrayList<Photo> collectionPhoto) throws SQLException {
-        String where = genererWhere(collectionCategorie);
+    public static void select(Connection connection, ArrayList<Categorie> collectionCategorie, ArrayList<Photo> collectionPhoto,Categorie categorie) throws SQLException {
+        String where = genererWhere(categorie);
 
         String requete = "SELECT photo.id,photo.libelle FROM photo " +
                 "INNER JOIN photo_categorie ON photo.id = photo_categorie.id_photo " +
-                "WHERE photo_categorie.id_categorie IN " + where + " GROUP BY 1,2";
+                "WHERE " + where + " GROUP BY 1,2";
         PreparedStatement preparedStatement = null;
         preparedStatement = connection.prepareStatement(requete);
         ResultSet resultSet = preparedStatement.executeQuery();
@@ -53,17 +53,29 @@ public class DaoPhoto {
         }
     }
 
+    private static String genererWhere(Categorie categorie) {
+        StringBuilder where = new StringBuilder();
+        where.append("photo_categorie.id_categorie =");
+
+        where.append(categorie.getId());
+
+
+        return where.toString();
+    }
+
     private static String genererWhere(ArrayList<Categorie> collectionCategorie) {
         StringBuilder where = new StringBuilder();
-        where.append("(");
+        where.append("photo_categorie.id_categorie IN (");
         int i = 0;
         int nombreCategorie = collectionCategorie.size();
+
         for (Categorie categorie : collectionCategorie) {
             where.append(categorie.getId());
-            if (i++ < nombreCategorie-1) {
+            if (i++ < nombreCategorie - 1) {
                 where.append(",");
             }
         }
+
         return where.append(")").toString();
     }
 
